@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.vw-100 {
+    width: 100vw;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>div {
+    display: flex;
+    height: 100%;
+}
+
+nav .navitem {
+    margin: 1rem
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-accent {
+    background-color: orangered;
+}
+
+.py-3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.px-5 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.cover {
+    margin-top: 0;
+    background-color: #444;
+    height: 130px;
+    position: relative;
+}
+
+.center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.position-relative {
+    position: relative;
+}
+
+nav.bottom-nav .navitem {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 16px;
+}
+
+input {
+    border-radius: 12px;
+    border: 0;
+    height: 25px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    position: absolute;
+    color: black;
+    right: -20px;
+    padding: 2%;
+}
+
+.suggested {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1rem;
+    justify-content: space-between;
+    justify-items: stretch;
+    grid-auto-flow: dense;
+}
+
+.suggested>article {
+    background: brown;
+    overflow: hidden;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
