@@ -2,12 +2,16 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/colors.css">
-    <link rel="stylesheet" href="./css/spacing.css">
-    <link rel="stylesheet" href="./css/others.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/suggestion.css" />
+    <link rel="stylesheet" href="./css/bar.css" />
+    <link rel="stylesheet" href="./css/post.css" />
+
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/spacing.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" />
 </head>
 
 <body>
@@ -64,44 +68,64 @@
                 <i class="fas fa-search icon"></i>
                 <input class="px-3" type='search' placeholder="Search...">
             </div>
-
         </nav>
     </header>
     <main class="px-5">
-        <section class="row py-3">
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <img src='https://via.placeholder.com/800' alt="image placeholder" />
+        <section class="py-3 suggestion-section">
+            <div class="suggestion">
+                <img src='https://via.placeholder.com/300' alt="image placeholder" title="placeholder" />
+                <div class="details">
+                    <div class="category">
+                        <span>Life</span>
+                        <span>Travel</span>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                    <span>1 month ago</span>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <img src='https://via.placeholder.com/800' alt="image placeholder" />
+            <div class="suggestion">
+                <img src='https://via.placeholder.com/300' alt="image placeholder" title="placeholder" />
+                <div class="details">
+                    <div class="category">
+                        <span>Life</span>
+                        <span>Travel</span>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                    <span>1 month ago</span>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <img src='https://via.placeholder.com/800' alt="image placeholder" />
+            <div class="suggestion">
+                <img src='https://via.placeholder.com/300' alt="image placeholder" title="placeholder" />
+                <div class="details">
+                    <div class="category">
+                        <span>Life</span>
+                        <span>Travel</span>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                    <span>1 month ago</span>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <img src='https://via.placeholder.com/800' alt="image placeholder" />
+            <div class="suggestion">
+                <img src='https://via.placeholder.com/300' alt="image placeholder" title="placeholder" />
+                <div class="details">
+                    <div class="category">
+                        <span>Life</span>
+                        <span>Travel</span>
+                    </div>
+                    <h3>Lorem ipsum dolor</h3>
+                    <span>1 month ago</span>
+                </div>
             </div>
         </section>
-        <section class="row">
-            <div class="col-xs-8">
+        <section class="post-section">
+            <div class="posts">
                 <hr class="divider" data-content="POSTS">
-                <div class="row"> <button class='float-right bg-accent'>add post</button></div>
-                <div class="row">
-                    <img class="col-xs-4 pl-0" src='https://via.placeholder.com/300' alt="image placeholder" />
-                    <article class="col-xs-8">
-                        <div class="row">
-                            <span class="bg-accent text-white">Fashion</span>
-                            <span class="bg-accent text-white">Design</span>
-                            <span class="bg-accent text-white">Latest</span>
-                        </div>
-                        <h3 class="row"> Lorem ipsum dolor sit </h3>
-                        <p class="row">Professionally formulate future-proof networks with adaptive solutions.</p>
-                    </article>
-                </div>
-                <div class="row">
-                    <img class="col-xs-4 pl-0" src='https://via.placeholder.com/300' alt="image placeholder" />
-                    <article class="col-xs-8">
-                        <div class="row">
+
+
+                <div class="post">
+                    <img src='https://via.placeholder.com/300' alt="image placeholder" title='placeholder' />
+                    <article>
+                        <div class="tags">
                             <span class="bg-accent text-white">Fashion</span>
                             <span class="bg-accent text-white">Design</span>
                             <span class="bg-accent text-white">Latest</span>
@@ -111,12 +135,13 @@
                     </article>
                 </div>
             </div>
-            <aside class="col-xs-4">
+            <aside class="latest posts">
                 <div class="row">
                     <h3 class="text-uppercase">latest posts</h3>
                 </div>
                 <div class="row ">
-                    <img class="pl-0 col-xs-12 col-md-6" src='https://via.placeholder.com/100' alt="image placeholder" />
+                    <img class="pl-0 col-xs-12 col-md-6" src='https://via.placeholder.com/100'
+                        alt="image placeholder" />
                     <div class="pl-0 col-xs-12 col-md-6">
                         <h3> Lorem ipsum dolor</h3>
                         <span>1 month ago</span>

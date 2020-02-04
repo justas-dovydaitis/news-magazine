@@ -6,33 +6,6 @@ body {
     margin: 0;
 }
 
-.bar {
-    display: flex;
-    align-items: center;
-    background-color: #000000;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-
-.bar>* {
-    display: flex;
-    height: 100%;
-}
-
-.bar .item {
-    margin: 1rem
-}
-
-.bar.bottom-bar .item {
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 1.5rem;
-}
-
-.bar .item.active {
-    background-color: #ff4500;
-}
-
 .cover {
     margin-top: 0;
     background-color: #444444;
@@ -43,16 +16,6 @@ body {
 a {
     text-decoration: none;
     color: white;
-}
-
-.position-relative {
-    position: relative;
-}
-
-input {
-    border-radius: 12px;
-    border: 0;
-    height: 25px;
 }
 
 .icon {
@@ -108,11 +71,6 @@ hr.divider:after {
     background-color: #FFFFFF;
     font-size: 1.5em;
     font-weight: 900;
-}
-
-.posts {
-    display: grid;
-    grid-template-columns: repeat(12, calc(100%/12));
 }
 
 .scroll-top {
