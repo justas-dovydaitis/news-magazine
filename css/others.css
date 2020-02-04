@@ -1,0 +1,21 @@
+.d-flex {
+    display: flex;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pos-relative {
+    position: relative;
+}

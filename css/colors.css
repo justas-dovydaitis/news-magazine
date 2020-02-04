@@ -1,0 +1,19 @@
+.bg-grey {
+    background-color: lightgrey;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-accent {
+    background-color: orangered;
+}
+
+.text-white {
+    color: white;
+}
+
+a {
+    color: white;
+}
