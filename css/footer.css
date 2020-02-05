@@ -1,0 +1,21 @@
+footer>section.content {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(190, 190, 190);
+}
+
+@media only screen and (max-width: 767px) {
+    footer>section.content {
+        flex-flow: column;
+    }
+    footer>section.content>* {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.scroll-top {
+    position: absolute;
+    right: 1rem;
+    top: -.5rem;
+}

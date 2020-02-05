@@ -1,4 +1,4 @@
-section.post-section {
+.post-container {
     display: flex;
     width: 100%;
     flex-flow: wrap;
@@ -9,22 +9,53 @@ section.post-section {
     flex-flow: wrap;
 }
 
-.posts .post>img, .posts .post>article {
+.posts .post>img,
+.posts .post>article {
     width: 100%;
 }
 
+.post-container .latest.posts {
+    width: 100%;
+}
 
+.post-container .post-controls {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.post-container .post-controls>a {
+    background-color: #ff4500;
+}
 
 @media only screen and (min-width: 578px) {
-    .posts .post>img, .posts .post>article {
-        width: 50%;
-    }
-}
-@media only screen and (min-width: 768px) {
     .posts .post>article {
         width: 70%;
     }
+    .post>article,
+    .post .details {
+        padding-left: 1rem;
+    }
     .posts .post>img {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .post-container .posts {
+        width: 50%;
+    }
+    .post-container .latest.posts {
+        width: 50%;
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-container .posts {
+        width: 70%;
+    }
+    .post-container .latest.posts {
         width: 30%;
     }
 }

@@ -1,13 +1,13 @@
-section.suggestion-section {
+.suggestion-container {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
 }
+
 .suggestion {
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* border: 1px red solid; */
 }
 
 .suggestion>img {
@@ -30,12 +30,12 @@ section.suggestion-section {
     font-weight: 900;
 }
 
-
 @media only screen and (min-width: 576px) {
     .suggestion {
         width: 50%;
     }
 }
+
 @media only screen and (min-width: 992px) {
     .suggestion {
         width: 25%;
