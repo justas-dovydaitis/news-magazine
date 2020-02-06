@@ -29,6 +29,10 @@
     width: 100%;
 }
 
+.post-container .posts {
+    overflow-x: hidden;
+}
+
 .post-container .post-controls>a {
     background-color: #ff4500;
 }
