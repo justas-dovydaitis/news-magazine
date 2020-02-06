@@ -1,0 +1,138 @@
+.bar {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    background-color: #000000;
+    padding-left: 1.66rem;
+    padding-right: 1.66rem;
+}
+
+.bar.top-bar {
+    flex-flow: wrap-reverse;
+}
+
+.bar.top-bar>* {
+    display: flex;
+}
+
+.bar.top-bar>*:not(nav) {
+    flex-flow: wrap-reverse;
+    justify-content: space-between;
+}
+
+.bar.top-bar date {
+    width: 100%;
+    text-align: center;
+}
+
+.bar>* {
+    height: 100%;
+}
+
+.bar.top-bar>*,
+.bar.bottom-bar>nav {
+    width: 100%;
+}
+
+.bar.bottom-bar {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bar .item {
+    margin: .5rem 0
+}
+
+.bar.bottom-bar>nav {
+    display: none;
+}
+
+#menu-toggler {
+    display: none;
+}
+
+.bar.bottom-bar input[type=checkbox]:checked~nav {
+    display: flex;
+    flex-flow: column;
+}
+
+.bar.bottom-bar .show-menu {
+    display: block;
+    color: #ff4500;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.bar.bottom-bar .item {
+    height: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.bar .item.active {
+    background-color: #ff4500;
+}
+
+.bar input[type=search] {
+    border-radius: 12px;
+    border: 0;
+    height: 25px;
+    width: 10rem;
+}
+
+.bar date {
+    background-color: #FF4500;
+}
+
+.bar.top-bar nav {
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media only screen and (min-width:578px) {
+    .bar.top-bar>*:not(nav) {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .bar.top-bar date {
+        width: auto;
+        text-align: center;
+    }
+    .bar input[type=search] {
+        width: auto;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .bar.top-bar nav,
+    .bar.top-bar>* {
+        width: auto;
+    }
+    .bar.top-bar {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .bar .item {
+        margin: .5rem .5rem
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .bar.bottom-bar .show-menu {
+        display: none !important;
+    }
+    .bar.bar.bottom-bar>nav {
+        display: flex;
+        width: auto;
+    }
+    .bar.bar.bottom-bar {
+        flex-flow: row-reverse;
+    }
+    .bar.bottom-bar input[type=checkbox]:checked~nav {
+        flex-flow: row;
+    }
+}

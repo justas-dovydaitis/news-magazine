@@ -1,0 +1,43 @@
+.suggestion-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.suggestion {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.suggestion>img {
+    width: 100%;
+    height: auto;
+}
+
+.suggestion>.details {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+}
+
+.suggestion>.details>.category>span {
+    background-color: #ff4500;
+}
+
+.suggestion>.details>.category>h3 {
+    font-weight: 900;
+}
+
+@media only screen and (min-width: 576px) {
+    .suggestion {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .suggestion {
+        width: 25%;
+    }
+}

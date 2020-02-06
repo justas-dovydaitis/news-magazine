@@ -1,0 +1,11 @@
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.space-even {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}

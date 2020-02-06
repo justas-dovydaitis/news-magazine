@@ -1,0 +1,70 @@
+.post-container {
+    display: flex;
+    width: 100%;
+    flex-flow: wrap;
+}
+
+.posts .post {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.posts .post>img,
+.posts .post>article {
+    width: 100%;
+}
+
+.posts .post article .tags>span {
+    background-color: #ff4500;
+    color: white;
+}
+
+.post-container .latest.posts {
+    width: 100%;
+}
+
+.post-container .post-controls {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.post-container .posts {
+    overflow-x: hidden;
+}
+
+.post-container .post-controls>a {
+    background-color: #ff4500;
+}
+
+@media only screen and (min-width: 578px) {
+    .posts .post>article {
+        width: 70%;
+    }
+    .post>article,
+    .post .details {
+        padding-left: 1rem;
+    }
+    .posts .post>img {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .post-container .posts {
+        width: 50%;
+    }
+    .post-container .latest.posts {
+        width: 50%;
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .post-container .posts {
+        width: 70%;
+    }
+    .post-container .latest.posts {
+        width: 30%;
+    }
+}

@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+.cover {
+    margin-top: 0;
+    background-color: #444444;
+    height: 130px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    position: absolute;
+    color: #000000;
+    right: 0px;
+    padding: 2%;
+}
+
+hr.divider {
+    line-height: 1.5rem;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #000000;
+    text-align: center;
+    height: 1.5em;
+    opacity: 1;
+}
+
+hr.divider:before {
+    content: '';
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+
+hr.divider:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    padding: 0 3rem;
+    line-height: 1.5rem;
+    color: #000000;
+    background-color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 900;
+}
