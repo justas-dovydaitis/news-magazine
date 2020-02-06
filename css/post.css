@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: wrap;
     margin: 0.5rem;
+    overflow: hidden;
 }
 
 .post figure {
@@ -32,25 +33,18 @@
 }
 
 .post .details .tags>div {
-    backface-visibility: hidden;
     background-color: #ff4500;
     margin: 0.1rem;
     padding: 0.1rem;
-    transition: transform 0.5s ease;
+    transform: scale(1.0, 1.0);
+    transition: transform .5s;
 }
 
 .post .details .tags>div:hover {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
+    transform: scale(1.048);
 }
 
-.post .details>h1,
-.post .details>h2,
-.post .details>h3,
-.post .details>h4,
-.post .details>h5 {
-    font-weight: 900;
+.post .details>* {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -63,6 +57,6 @@
     }
     .post>figure,
     .post>.details {
-        width: auto;
+        width: 100%;
     }
 }

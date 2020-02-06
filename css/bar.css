@@ -15,6 +15,10 @@
     display: flex;
 }
 
+.bar.top-bar a.item:hover {
+    text-decoration: underline;
+}
+
 .bar.top-bar>*:not(nav) {
     flex-flow: wrap-reverse;
     justify-content: space-between;
@@ -46,11 +50,11 @@
     transition: color ease-in-out 0.5s;
 }
 
-.bar.bottom .item:not(.active):hover {
+.bar.bottom-bar .item:not(.active):hover {
     color: #FF4500;
 }
 
-.bar.bottom .item:active {
+.bar.bottom-bar .item:active {
     background-color: #FF4500;
 }
 
