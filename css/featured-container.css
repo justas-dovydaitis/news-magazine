@@ -6,13 +6,13 @@
 
 .featured-post-container .post {
     position: relative;
-    padding: 1rem;
+    /* padding: 1rem; */
     overflow: hidden;
     width: 100%;
-    background-image: url('https://via.placeholder.com/300?text=News+Magazine?text=News+Magazine');
+    /* background-image: url('https://via.placeholder.com/300?text=News+Magazine?text=News+Magazine');
     background-repeat: repeat-y;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 
 .featured-post-container .post>img {
@@ -21,25 +21,25 @@
 }
 
 .featured-post-container .post>.details {
-    display: flex;
+    /* display: flex;
     flex-flow: column;
     width: calc(100% - 2rem);
-    margin-top: 50%;
-    /* position: absolute; */
-    /* bottom: 3rem; */
-    /* left: 3rem; */
-    /* color: white; */
-    /* width: calc(100% - 6rem); */
+    margin-top: 50%; */
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+    width: calc(100% - 6rem);
 }
 
 @media only screen and (min-width: 576px) {
     .featured-post-container .post {
-        width: calc(50% - 2rem);
+        width: calc(50% - 1rem);
     }
 }
 
 @media only screen and (min-width: 992px) {
     .featured-post-container .post {
-        width: calc(25% - 2rem);
+        width: calc(25% - 1rem);
     }
 }

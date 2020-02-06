@@ -41,20 +41,20 @@
     height: 100%;
 }
 
-.bar .item {
+.bar.bottom-bar .item {
     margin: .5rem 0;
     transition: color ease-in-out 0.5s;
 }
 
-.bar .item:not(.active):hover {
+.bar.bottom .item:not(.active):hover {
     color: #FF4500;
 }
 
-.bar .item:active {
+.bar.bottom .item:active {
     background-color: #FF4500;
 }
 
-.bar .item:active:hover {
+.bar.bar.bottom-bar .item:active:hover {
     color: #FFFFFF;
     transition: none;
 }

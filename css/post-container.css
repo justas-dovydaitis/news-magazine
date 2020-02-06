@@ -32,9 +32,6 @@
     .posts .post>.details {
         width: 70%;
     }
-    .post>.details {
-        padding-left: 1rem;
-    }
     .posts .post>figure {
         width: 30%;
     }
