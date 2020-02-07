@@ -34,6 +34,11 @@
 
 .post-container .post-controls>a {
     background-color: #ff4500;
+    padding: .5rem;
+}
+
+.post-container .post-controls>a:hover {
+    background-color: #000000;
 }
 
 .post .details>p {

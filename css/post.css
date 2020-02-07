@@ -16,6 +16,15 @@
     width: 100%;
 }
 
+.post>figure img {
+    filter: brightness(0.9);
+    transition: filter linear 0.2s;
+}
+
+.post:hover>figure img {
+    filter: brightness(1);
+}
+
 .post.new>figure::after {
     top: 0;
     left: 0;

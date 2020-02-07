@@ -8,7 +8,7 @@
 }
 
 .bar.top-bar {
-    flex-flow: wrap-reverse;
+    flex-flow: wrap;
 }
 
 .bar.top-bar .item {
@@ -25,14 +25,15 @@
 
 .bar.top-bar>*:not(nav) {
     flex-flow: wrap;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-evenly;
+}
+
+.bar.top-bar>nav {
+    border-bottom: 1px solid #FF4500;
 }
 
 .bar.top-bar date {
-    width: 100%;
-    text-align: center;
-    display: none;
+    padding: 0 0.5rem;
 }
 
 .bar>* {
@@ -113,14 +114,12 @@
 
 .bar.top-bar nav {
     flex-flow: row;
-    justify-content: flex-start;
-    /* width: 100%; */
+    justify-content: space-between;
 }
 
 @media only screen and (min-width:578px) {
     .bar.top-bar>*:not(nav) {
         flex-flow: row;
-        justify-content: flex-end;
     }
     .bar.top-bar date {
         width: auto;
@@ -133,6 +132,9 @@
 }
 
 @media only screen and (min-width:768px) {
+    .bar.top-bar>nav {
+        border-bottom: none
+    }
     .bar.top-bar nav,
     .bar.top-bar>* {
         width: auto;
@@ -147,6 +149,10 @@
 }
 
 @media only screen and (min-width:992px) {
+    .bar.top-bar>*:not(nav) {
+        flex-flow: wrap;
+        justify-content: flex-start;
+    }
     .bar.bottom-bar .show-menu {
         display: none !important;
     }
