@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.post-container .post.new>figure::after {
+    position: absolute
+}
+
 .post-container .posts {
     overflow-x: hidden;
 }
@@ -28,30 +32,76 @@
     background-color: #ff4500;
 }
 
+.post .details>p {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @media only screen and (min-width: 578px) {
-    .posts .post>.details {
-        width: 70%;
+    .post-container .details {
+        padding-left: 1rem;
     }
-    .posts .post>figure {
-        width: 30%;
+    .post-container .posts .post figure {
+        width: 10rem;
+        height: auto;
+    }
+    .post-container .posts .details {
+        width: calc(100% - 10rem)
+    }
+    .post-container .latest.posts .post figure {
+        width: 8rem;
+        height: auto;
+    }
+    .post-container .latest.posts .details {
+        width: calc(100% - 8rem)
+    }
+    .post .details>p {
+        -webkit-line-clamp: 3;
     }
 }
 
 @media only screen and (min-width: 992px) {
     .post-container .posts {
-        width: 50%;
+        width: 65%;
     }
     .post-container .latest.posts {
-        width: 50%;
+        width: 35%;
         padding-left: 1rem;
+    }
+    .post-container .posts .post figure {
+        width: 10rem;
+        height: auto;
+    }
+    .post-container .posts .details {
+        width: calc(100% - 10rem)
+    }
+    .post-container .latest.posts .post figure {
+        width: 6rem;
+        height: auto;
+    }
+    .post-container .latest.posts .details {
+        width: calc(100% - 6rem)
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .post-container .posts {
-        width: 70%;
+    .post-container .posts .post figure {
+        width: 15rem;
+        height: auto;
     }
-    .post-container .latest.posts {
-        width: 30%;
+    .post-container .posts .details {
+        width: calc(100% - 15rem)
+    }
+    .post-container .latest.posts .post figure {
+        width: 10rem;
+        height: auto;
+    }
+    .post-container .latest.posts .details {
+        width: calc(100% - 10rem)
+    }
+    .post .details>p {
+        -webkit-line-clamp: 7;
     }
 }

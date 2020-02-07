@@ -7,6 +7,7 @@
 
 .post figure {
     margin: 0;
+    position: relative;
 }
 
 .post>figure,
@@ -29,22 +30,25 @@
 .post .details .tags {
     display: flex;
     flex-flow: wrap;
+    align-items: center;
     color: #FFFFFF;
+    height: 2rem;
 }
 
 .post .details .tags>div {
     background-color: #ff4500;
+    height: min-content;
     margin: 0.1rem;
-    padding: 0.1rem;
-    transform: scale(1.0, 1.0);
-    transition: transform .5s;
+    padding: 0.2rem;
+    font-size: 1rem;
+    transition: font-size ease .2s;
 }
 
 .post .details .tags>div:hover {
-    transform: scale(1.048);
+    font-size: 1.1rem;
 }
 
-.post .details>* {
+.post .details>h3 {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
