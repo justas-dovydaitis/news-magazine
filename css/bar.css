@@ -11,6 +11,10 @@
     flex-flow: wrap-reverse;
 }
 
+.bar.top-bar .item {
+    margin: .5rem .5rem
+}
+
 .bar.top-bar>* {
     display: flex;
 }
@@ -20,13 +24,15 @@
 }
 
 .bar.top-bar>*:not(nav) {
-    flex-flow: wrap-reverse;
+    flex-flow: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .bar.top-bar date {
     width: 100%;
     text-align: center;
+    display: none;
 }
 
 .bar>* {
@@ -107,18 +113,19 @@
 
 .bar.top-bar nav {
     flex-flow: row;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-start;
+    /* width: 100%; */
 }
 
 @media only screen and (min-width:578px) {
     .bar.top-bar>*:not(nav) {
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     .bar.top-bar date {
         width: auto;
         text-align: center;
+        display: block;
     }
     .bar input[type=search] {
         width: auto;

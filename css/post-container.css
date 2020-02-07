@@ -4,17 +4,21 @@
     width: 100%;
 }
 
+.post-container .posts:not(.latest) .post .details {
+    position: relative;
+    margin-top: -3rem;
+}
+
+.post-container .post .tags>div:first-child {
+    margin-left: 0;
+}
+
 .post-container .post.new>figure::after {
     position: absolute
 }
 
 .post-container .posts {
     overflow-x: hidden;
-}
-
-.posts .post details .tags .span {
-    background-color: #ff4500;
-    color: white;
 }
 
 .post-container .latest.posts,
@@ -40,6 +44,13 @@
 }
 
 @media only screen and (min-width: 578px) {
+    .post-container .posts:not(.latest) .post .details {
+        position: static;
+        margin-top: 0;
+    }
+    .post-container .post .details .tags {
+        margin-left: 0;
+    }
     .post-container .details {
         padding-left: 1rem;
     }
