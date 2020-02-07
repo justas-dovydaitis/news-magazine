@@ -26,7 +26,7 @@
 
 .bar.top-bar>*:not(nav) {
     flex-flow: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .bar.top-bar>nav {

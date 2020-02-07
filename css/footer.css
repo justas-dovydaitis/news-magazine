@@ -6,12 +6,12 @@ footer {
 }
 
 footer>section {
-    padding: .5rem 5rem;
+    padding: .5rem 1.8rem;
 }
 
 footer>section.content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-flow: column;
     background-color: rgb(190, 190, 190);
     color: #000000;
@@ -48,6 +48,9 @@ footer>section.content .search>input {
 @media only screen and (min-width: 578px) {
     footer>section.content {
         flex-flow: wrap;
+    }
+    footer>section {
+        padding: .5rem 5rem;
     }
 }
 
