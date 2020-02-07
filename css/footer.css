@@ -1,17 +1,24 @@
 footer {
+    display: flex;
+    flex-direction: column;
     background: #000000;
     color: #FFFFFF;
 }
 
+footer>section {
+    padding: .5rem 5rem;
+}
+
 footer>section.content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-flow: column;
     background-color: rgb(190, 190, 190);
     color: #000000;
 }
 
-footer section {
-    padding: .5rem 8rem;
+footer>section.content>* {
+    margin: 1rem 0;
 }
 
 footer ul {
@@ -19,32 +26,37 @@ footer ul {
     list-style-type: disc;
 }
 
-footer input {
-    border: 1px solid #000000;
-    background: #FFFFFF;
+footer>section.content .search {
+    width: 100%;
 }
 
-footer input~button {
+footer>section.content .search>button {
+    width: 2rem;
+    height: 2rem;
     border: 1px solid #000000;
-    background: #000000;
+    background-color: #000000;
     color: #FFFFFF;
 }
 
-@media only screen and (max-width: 767px) {
+footer>section.content .search>input {
+    width: calc(100% - 2rem);
+    height: 2rem;
+    border: 1px solid #000000;
+    background-color: #FFFFFF;
+}
+
+@media only screen and (min-width: 578px) {
     footer>section.content {
-        flex-flow: column;
+        flex-flow: wrap;
     }
-    footer>section.content>* {
-        width: 100%;
-        justify-content: center;
+}
+
+@media only screen and (min-width:768px) {
+    footer>section.content .search {
+        width: auto;
     }
-    footer section {
-        padding-left: 1.8rem;
-        padding-right: 1.8rem;
-    }
-    .scroll-top {
-        position: absolute;
-        right: 1rem;
-        top: -.5rem;
+    footer>section.content {
+        flex-flow: wrap;
+        justify-content: space-between;
     }
 }
