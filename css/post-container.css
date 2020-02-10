@@ -9,14 +9,6 @@
         margin-top: -3rem;
     }
     
-    .post-container .post .tags>div:first-child {
-        margin-left: 0;
-    }
-    
-    .post-container .post.new>figure::after {
-        position: absolute
-    }
-    
     .post-container .posts {
         overflow-x: hidden;
     }
