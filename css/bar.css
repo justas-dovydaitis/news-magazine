@@ -64,13 +64,19 @@
     transition: color ease-in-out 0.5s;
 }
 
+.bar.bottom-bar .item.active {
+    background-color: #FF4500;
+    color: #FFFFFF;
+}
+
 .bar.bottom-bar .item:not(.active):hover {
     color: #FF4500;
 }
 
-.bar.bottom-bar .item:focus {
+
+/* .bar.bottom-bar .item:focus {
     background-color: #FF4500;
-}
+} */
 
 .bar.bar.bottom-bar .item:focus:hover {
     color: #FFFFFF;
