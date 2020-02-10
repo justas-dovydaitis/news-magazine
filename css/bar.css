@@ -15,6 +15,9 @@
 
 .bar.top-bar {
     flex-flow: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 .bar.top-bar .item {
