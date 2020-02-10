@@ -10,33 +10,38 @@
     position: relative;
 }
 
-.post>figure,
-.post>figure img,
+.post a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.post figure,
+.post figure img,
 .post>.details {
     width: 100%;
 }
 
-.post>figure img {
+.post figure img {
     opacity: 0.9;
     transition: opacity linear 0.2s;
 }
 
-.post:hover>figure img {
+.post:hover figure img {
     opacity: 1;
 }
 
 @supports(filter: brightness(0.9)) {
-    .post>figure img {
+    .post figure img {
         opacity: 1;
         filter: brightness(0.9);
         transition: filter linear 0.2s;
     }
-    .post:hover>figure img {
+    .post:hover figure img {
         filter: brightness(1);
     }
 }
 
-.post.new>figure::after {
+.post.new figure::after {
     top: 0;
     left: 0;
     content: 'New';
@@ -55,7 +60,7 @@
     height: 2rem;
 }
 
-.post .details .tags>div {
+.post .details .tags a {
     background-color: #ff4500;
     height: min-content;
     margin: 0.1rem;
@@ -64,22 +69,36 @@
     transition: font-size ease .2s;
 }
 
-.post .details .tags>div:hover {
+.post .details .tags a:hover {
     font-size: 1.1rem;
 }
 
-.post .details>h3 {
+.post .details a {
+    text-decoration: none;
+}
+
+.post .details h3,
+.post .details p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post .details h3 {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+.post .details span {
+    font-size: .9rem;
+}
+
 @media only screen and (min-width: 578px) {
     .post {
         flex-flow: wrap
     }
-    .post>figure,
+    .post figure,
     .post>.details {
         width: 100%;
     }

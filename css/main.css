@@ -28,11 +28,6 @@ main {
     justify-content: center;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 hr.divider {
     line-height: 1.5rem;
     position: relative;

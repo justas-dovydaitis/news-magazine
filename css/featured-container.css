@@ -6,25 +6,11 @@
 
 .featured-post-container .post {
     position: relative;
-    /* padding: 1rem; */
     overflow: hidden;
     width: 100%;
-    /* background-image: url('https://via.placeholder.com/300?text=News+Magazine?text=News+Magazine');
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-position: center; */
-}
-
-.featured-post-container .post>img {
-    width: 100%;
-    height: auto;
 }
 
 .featured-post-container .post>.details {
-    /* display: flex;
-    flex-flow: column;
-    width: calc(100% - 2rem);
-    margin-top: 50%; */
     position: absolute;
     bottom: 3rem;
     left: 3rem;

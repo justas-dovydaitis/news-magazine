@@ -8,6 +8,11 @@
     color: #FFFFFF;
 }
 
+.bar a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .bar.top-bar {
     flex-flow: wrap;
 }
