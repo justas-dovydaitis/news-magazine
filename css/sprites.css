@@ -1,14 +1,52 @@
 .icon {
-    background-image: url('../assets/sprite-action-grey600.png');
     background-repeat: no-repeat;
-    /* width: 34px; */
 }
 
+.icon.black {
+    background-image: url('../assets/black.png');
+}
 
-/* 442 x 442 */
+.icon.white {
+    background-image: url('../assets/white.png');
+}
+
+.icon.orange {
+    background-image: url('../assets/orange.png');
+}
 
 .icon.icon-search {
-    background-position: -238px -306px;
-    width: 42px;
-    height: 32px;
+    width: 21px;
+    height: 21px;
+    background-position: -39px -5px;
+}
+
+.icon.icon-chevron-up {
+    width: 19px;
+    height: 21px;
+    background-position: -36px -36px;
+    ;
+}
+
+.icon.icon-pinterest {
+    width: 16px;
+    height: 21px;
+    background-position: -70px -5px;
+}
+
+.icon.icon-twitter {
+    width: 21px;
+    height: 21px;
+    background-position: -5px -36px;
+}
+
+.icon.icon-youtube {
+    width: 24px;
+    height: 21px;
+    background-position: -5px -5px;
+}
+
+.icon.icon-facebook {
+    width: 13px;
+    height: 21px;
+    background-position: -70px -36px;
 }
