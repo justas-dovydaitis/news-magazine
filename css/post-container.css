@@ -1,0 +1,158 @@
+    .post-container {
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+    }
+    
+    .post-container .posts:not(.latest) .post .details {
+        position: relative;
+        margin-top: -3rem;
+    }
+    
+    .post-container .posts {
+        overflow-x: hidden;
+    }
+    
+    .post-container .latest.posts,
+    .post-container .post>figure {
+        width: 100%;
+    }
+    
+    .post-container .post .details a>h3 {
+        color: #000000;
+    }
+    
+    .post-container .post-controls {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    .post-container .post-controls>a {
+        background-color: #ff4500;
+        padding: .5rem;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    
+    .post-container .post-controls>a:hover {
+        background-color: #000000;
+    }
+    
+    .post .details>p {
+        max-height: 6rem;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .post .details>p::after {
+        content: '';
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 100%);
+    }
+    
+    @supports (-webkit-line-clamp: 8) {
+        .post .details>p {
+            max-height: none;
+            display: -webkit-box;
+            -webkit-line-clamp: 8;
+            -webkit-box-orient: vertical;
+        }
+        .post .details>p:after {
+            display: none;
+        }
+    }
+    
+    @media only screen and (min-width: 578px) {
+        .post-container .posts:not(.latest) .post .details {
+            position: static;
+            margin-top: 0;
+        }
+        .post-container .post .details .tags {
+            margin-left: 0;
+        }
+        .post-container .details {
+            padding-left: 1rem;
+        }
+        .post-container .posts .post figure {
+            width: 10rem;
+            height: auto;
+        }
+        .post-container .posts .details {
+            width: calc(100% - 10rem)
+        }
+        .post-container .latest.posts .post figure {
+            width: 8rem;
+            height: auto;
+        }
+        .post-container .latest.posts .details {
+            width: calc(100% - 8rem)
+        }
+        .post .details>p {
+            max-height: 3.1rem;
+            overflow: hidden;
+            position: relative;
+        }
+        @supports (display: -webkit-box) {
+            .post .details>p {
+                max-height: none;
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 992px) {
+        .post-container .posts {
+            width: 65%;
+        }
+        .post-container .latest.posts {
+            width: 35%;
+            padding-left: 1rem;
+        }
+        .post-container .posts .post figure {
+            width: 10rem;
+            height: auto;
+        }
+        .post-container .posts .details {
+            width: calc(100% - 10rem)
+        }
+        .post-container .latest.posts .post figure {
+            width: 6rem;
+            height: auto;
+        }
+        .post-container .latest.posts .details {
+            width: calc(100% - 6rem)
+        }
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        .post-container .posts .post figure {
+            width: 15rem;
+            height: auto;
+        }
+        .post-container .posts .details {
+            width: calc(100% - 15rem)
+        }
+        .post-container .latest.posts .post figure {
+            width: 10rem;
+            height: auto;
+        }
+        .post-container .latest.posts .details {
+            width: calc(100% - 10rem)
+        }
+        .post .details>p {
+            max-height: 8rem;
+            position: relative;
+        }
+        @supports (display: -webkit-box) {
+            .post .details>p {
+                max-height: none;
+                -webkit-line-clamp: 7;
+            }
+        }
+    }

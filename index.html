@@ -3,12 +3,15 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/suggestion.css" />
     <link rel="stylesheet" href="./css/bar.css" />
     <link rel="stylesheet" href="./css/post.css" />
+    <link rel="stylesheet" href="./css/featured-container.css" />
+    <link rel="stylesheet" href="./css/post-container.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/sprites.css" />
 
     <link rel="stylesheet" href="./css/spacing.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
@@ -17,7 +20,7 @@
 </head>
 
 <body>
-    <header class="">
+    <header id="top">
         <div class="bar top-bar">
             <nav>
                 <a class="item" href="javascript:void(0);">
@@ -63,11 +66,12 @@
                 </label>
             <input type="checkbox" id="menu-toggler" />
             <div>
-                <!-- <i class="fas fa-search icon"></i> -->
-                <input class="px-3" type="search" placeholder="Search...">
+                <input class="px-3" type="search" placeholder="Search..." />
+                <div class="icon icon-search"></div>
+
             </div>
             <nav>
-                <a class="item active" href="javascript:void(0);">Home</a>
+                <a class="item" href="javascript:void(0);">Home</a>
                 <a class="item" href="javascript:void(0);">Life</a>
                 <a class="item" href="javascript:void(0);">Vintage</a>
                 <a class="item" href="javascript:void(0);">Latest</a>
@@ -78,48 +82,80 @@
         </div>
     </header>
     <main class="px-5">
-        <section class="py-3 suggestion-container">
-            <div class="suggestion">
-                <img src="https://via.placeholder.com/300?text=News+Magazine?text=News+Magazine" alt="image placeholder" title="placeholder" />
+        <section class="py-3 featured-post-container">
+            <div class="post new">
+                <figure>
+                    <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                </figure>
                 <div class="details">
-                    <div class="category">
-                        <span>Life</span>
-                        <span>Travel</span>
+                    <div class="tags">
+                        <a href="javascript:void(0)">
+                          Life
+                        </a>
+                        <a href="javascript:void(0)">
+                            Travel
+                        </a>
                     </div>
-                    <h3>Lorem ipsum dolor</h3>
+                    <a href="javascript:void(0)">
+                        <h3 title="Conveniently formulate enterprise initiatives for multidisciplinary innovation.">Conveniently formulate enterprise initiatives for multidisciplinary innovation.</h3>
+                    </a>
                     <span>1 month ago</span>
                 </div>
             </div>
-            <div class="suggestion">
-                <img src="https://via.placeholder.com/300?text=News+Magazine" alt="image placeholder" title="placeholder" />
+            <div class="post">
+                <figure>
+                    <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                </figure>
                 <div class="details">
-                    <div class="category">
-                        <span>Life</span>
-                        <span>Travel</span>
+                    <div class="tags">
+                        <a href="javascript:void(0)">
+                          Life
+                        </a>
+                        <a href="javascript:void(0)">
+                            Travel
+                        </a>
                     </div>
-                    <h3>Lorem ipsum dolor</h3>
+                    <a href="javascript:void(0)">
+                        <h3 title="Conveniently formulate enterprise initiatives for multidisciplinary innovation.">Conveniently formulate enterprise initiatives for multidisciplinary innovation.</h3>
+                    </a>
                     <span>1 month ago</span>
                 </div>
             </div>
-            <div class="suggestion">
-                <img src="https://via.placeholder.com/300?text=News+Magazine" alt="image placeholder" title="placeholder" />
+            <div class="post new">
+                <figure>
+                    <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                </figure>
                 <div class="details">
-                    <div class="category">
-                        <span>Life</span>
-                        <span>Travel</span>
+                    <div class="tags">
+                        <a href="javascript:void(0)">
+                          Life
+                        </a>
+                        <a href="javascript:void(0)">
+                            Travel
+                        </a>
                     </div>
-                    <h3>Lorem ipsum dolor</h3>
+                    <a href="javascript:void(0)">
+                        <h3 title="Conveniently formulate enterprise initiatives for multidisciplinary innovation.">Conveniently formulate enterprise initiatives for multidisciplinary innovation.</h3>
+                    </a>
                     <span>1 month ago</span>
                 </div>
             </div>
-            <div class="suggestion">
-                <img src="https://via.placeholder.com/300?text=News+Magazine" alt="image placeholder" title="placeholder" />
+            <div class="post">
+                <figure>
+                    <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                </figure>
                 <div class="details">
-                    <div class="category">
-                        <span>Life</span>
-                        <span>Travel</span>
+                    <div class="tags">
+                        <a href="javascript:void(0)">
+                          Life
+                        </a>
+                        <a href="javascript:void(0)">
+                            Travel
+                        </a>
                     </div>
-                    <h3>Lorem ipsum dolor</h3>
+                    <a href="javascript:void(0)">
+                        <h3 title="Conveniently formulate enterprise initiatives for multidisciplinary innovation.">Conveniently formulate enterprise initiatives for multidisciplinary innovation.</h3>
+                    </a>
                     <span>1 month ago</span>
                 </div>
             </div>
@@ -131,25 +167,45 @@
                     <a class="btn-add-post" href="javascript:void(0)">Add post</a>
                 </div>
 
-                <div class="post">
-                    <img src="https://via.placeholder.com/300?text=News+Magazine" alt="image placeholder" title="placeholder" />
-                    <article>
+                <div class="post new">
+                    <a href="javascript:void(0)">
+                        <figure>
+                            <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                        </figure>
+                    </a>
+                    <article class="details">
                         <div class="tags">
-                            <span class="bg-accent text-white">Fashion</span>
-                            <span class="bg-accent text-white">Design</span>
-                            <span class="bg-accent text-white">Latest</span>
+                            <a href="javascript:void(0)">Fashion</a>
+                            <a href="javascript:void(0)">Design </a>
+                            <a href="javascript:void(0)">Latest</a>
                         </div>
-                        <h3> Lorem ipsum dolor sit </h3>
-                        <p>Professionally formulate future-proof networks with adaptive solutions.</p>
+                        <a href="javascript:void(0)">
+                            <h3 title="Lorem ipsum dolor sit">Phosfluorescently provide access to scalable solutions after tactical outsourcing.</h3>
+                        </a>
+                        <p>Objectively optimize impactful platforms and scalable web-readiness. Interactively transition high standards in catalysts for change after premier ideas. Quickly fashion sustainable initiatives whereas customer directed paradigms.
+                            Monotonectally redefine extensible customer service and web-enabled users. Dynamically drive leveraged processes without next-generation sources. Quickly pursue highly efficient materials through equity invested information.
+                            Rapidiously deploy diverse deliverables whereas focused paradigms. Interactively provide access to unique sources after end-to-end value. Appropriately mesh client-focused functionalities rather than plug-and-play experiences.
+                            Energistically redefine fully tested portals through visionary schemas. Holisticly expedite leveraged web-readiness for leveraged markets. Competently actualize client-focused sources rather than top-line paradigms. Globally
+                            embrace quality processes and premier best practices. Assertively fashion cutting-edge functionalities through B2C products. Monotonectally incubate goal-oriented ideas and end-to-end methodologies. Phosfluorescently enable
+                            flexible niche markets with goal-oriented portals. Collaboratively supply client-focused testing procedures and interoperable applications. Rapidiously fabricate alternative niches whereas adaptive e-commerce. Seamlessly.
+                        </p>
                     </article>
                 </div>
+                </a>
             </div>
             <aside class="latest posts">
                 <h3 class="text-uppercase">latest posts</h3>
-                <div class="post">
-                    <img src="https://via.placeholder.com/100?text=News+Magazine" alt="image placeholder" />
+
+                <div class="post new">
+                    <a href="javascript:void(0)">
+                        <figure>
+                            <img src="https://via.placeholder.com/300/444444?text=News+Magazine" alt="image placeholder" title="placeholder" />
+                        </figure>
+                    </a>
                     <div class="details">
-                        <h3> Lorem ipsum dolor</h3>
+                        <a href="javascript:void(0)">
+                            <h3 title="Lorem ipsum dolor sit">Compellingly matrix multidisciplinary methods of empowerment vis-a-vis.</h3>
+                        </a>
                         <span>1 month ago</span>
                     </div>
                 </div>
@@ -161,28 +217,29 @@
             <div>
                 <h3 class="mt-0">Recent Posts</h3>
                 <ul>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a></li>
+
                 </ul>
             </div>
             <div>
                 <h3 class="mt-0">Recent Comments</h3>
                 <ul>
-                    <li><strong>Someone</strong> on <strong>Hello world!</strong></li>
-                    <li><strong>Someone</strong> on <strong>Hello world!</strong></li>
-                    <li><strong>Someone</strong> on <strong>Hello world!</strong></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a> on <a href="javascript:void(0)">Helo world!</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a>on <a href="javascript:void(0)">Helo world!</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a>on <a href="javascript:void(0)">Helo world!</a></li>
                 </ul>
             </div>
-            <div>
-                <input type="search" placeholder="Search..." />
+            <div class="search">
+                <input type="search" placeholder="Search..." /><button class="icon icon-search">&zwnj;</button>
             </div>
         </section>
-        <section>
-            &copy; dalykai
-            <!-- <a class="scroll-top bg-black" href="javascript:void(0);">top</a> -->
+        <section class="bottom-footer">
+            <p>
+                &copy; Justas Dovydaitis | Completely maintain next-generation collaboration and idea-sharing with.
+            </p>
+            <a class="scroll-top icon icon-search" href="javascript:void(0)"></a>
         </section>
     </footer>
 </body>

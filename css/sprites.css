@@ -1,0 +1,14 @@
+.icon {
+    background-image: url('../assets/sprite-action-grey600.png');
+    background-repeat: no-repeat;
+    /* width: 34px; */
+}
+
+
+/* 442 x 442 */
+
+.icon.icon-search {
+    background-position: -238px -306px;
+    width: 42px;
+    height: 32px;
+}

@@ -1,0 +1,31 @@
+.featured-post-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.featured-post-container .post {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.featured-post-container .post>.details {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+    width: calc(100% - 6rem);
+}
+
+@media only screen and (min-width: 576px) {
+    .featured-post-container .post {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .featured-post-container .post {
+        width: calc(25% - 1rem);
+    }
+}

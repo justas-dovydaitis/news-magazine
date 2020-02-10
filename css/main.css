@@ -4,6 +4,14 @@
 
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 main {
@@ -16,21 +24,8 @@ main {
     height: 130px;
     display: flex;
     flex-flow: column;
+    color: #FFFFFF;
     justify-content: center;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.icon {
-    padding: 10px;
-    min-width: 40px;
-    position: absolute;
-    color: #000000;
-    right: 0px;
-    padding: 2%;
 }
 
 hr.divider {
@@ -61,7 +56,6 @@ hr.divider:after {
     color: #000000;
     padding: 0 3rem;
     line-height: 1.5rem;
-    color: #000000;
     background-color: #FFFFFF;
     font-size: 1.5em;
     font-weight: 900;

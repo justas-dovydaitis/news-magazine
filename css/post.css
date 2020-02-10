@@ -1,70 +1,105 @@
-.post-container {
-    display: flex;
-    width: 100%;
-    flex-flow: wrap;
-}
-
-.posts .post {
+.post {
     display: flex;
     flex-flow: wrap;
+    margin: 0.5rem;
+    overflow: hidden;
 }
 
-.posts .post>img,
-.posts .post>article {
+.post figure {
+    margin: 0;
+    position: relative;
+}
+
+.post a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.post figure,
+.post figure img,
+.post>.details {
     width: 100%;
 }
 
-.posts .post article .tags>span {
+.post figure img {
+    opacity: 0.9;
+    transition: opacity linear 0.2s;
+}
+
+.post:hover figure img {
+    opacity: 1;
+}
+
+@supports(filter: brightness(0.9)) {
+    .post figure img {
+        opacity: 1;
+        filter: brightness(0.9);
+        transition: filter linear 0.2s;
+    }
+    .post:hover figure img {
+        filter: brightness(1);
+    }
+}
+
+.post.new figure::after {
+    top: 0;
+    left: 0;
+    content: 'New';
+    position: absolute;
     background-color: #ff4500;
+    padding: .5rem;
+    text-transform: uppercase;
     color: white;
 }
 
-.post-container .latest.posts {
-    width: 100%;
-}
-
-.post-container .post-controls {
+.post .details .tags {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    flex-flow: wrap;
+    align-items: center;
+    color: #FFFFFF;
+    height: 2rem;
 }
 
-.post-container .posts {
-    overflow-x: hidden;
-}
-
-.post-container .post-controls>a {
+.post .details .tags a {
     background-color: #ff4500;
+    height: min-content;
+    margin: 0.1rem;
+    padding: 0.2rem;
+    font-size: 1rem;
+    transition: font-size ease .2s;
+}
+
+.post .details .tags a:hover {
+    font-size: 1.1rem;
+}
+
+.post .details a {
+    text-decoration: none;
+}
+
+.post .details h3,
+.post .details p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post .details h3 {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post .details span {
+    font-size: .9rem;
 }
 
 @media only screen and (min-width: 578px) {
-    .posts .post>article {
-        width: 70%;
+    .post {
+        flex-flow: wrap
     }
-    .post>article,
-    .post .details {
-        padding-left: 1rem;
-    }
-    .posts .post>img {
-        width: 30%;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .post-container .posts {
-        width: 50%;
-    }
-    .post-container .latest.posts {
-        width: 50%;
-        padding-left: 1rem;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .post-container .posts {
-        width: 70%;
-    }
-    .post-container .latest.posts {
-        width: 30%;
+    .post figure,
+    .post>.details {
+        width: 100%;
     }
 }
