@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/featured-container.css" />
     <link rel="stylesheet" href="./css/post-container.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/sprites.css" />
 
     <link rel="stylesheet" href="./css/spacing.css" />
     <link rel="stylesheet" href="./css/utilities.css" />
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-    <header class="">
+    <header id="top">
         <div class="bar top-bar">
             <nav>
                 <a class="item" href="javascript:void(0);">
@@ -65,8 +66,9 @@
                 </label>
             <input type="checkbox" id="menu-toggler" />
             <div>
-                <!-- <i class="fas fa-search icon"></i> -->
-                <input class="px-3" type="search" placeholder="Search...">
+                <input class="px-3" type="search" placeholder="Search..." />
+                <div class="icon icon-search"></div>
+
             </div>
             <nav>
                 <a class="item" href="javascript:void(0);">Home</a>
@@ -251,12 +253,14 @@
                 </ul>
             </div>
             <div class="search">
-                <input type="search" placeholder="Search..." /><button><i class="fa fa-search"></i></button>
+                <input type="search" placeholder="Search..." /><button class="icon icon-search">&zwnj;</button>
             </div>
         </section>
-        <section>
-            &copy; Justas Dovydaitis | Completely maintain next-generation collaboration and idea-sharing with.
-            <!-- <a class="scroll-top bg-black" href="javascript:void(0);">top</a></a>> -->
+        <section class="bottom-footer">
+            <p>
+                &copy; Justas Dovydaitis | Completely maintain next-generation collaboration and idea-sharing with.
+            </p>
+            <a class="scroll-top icon icon-search" href="#top"></a>
         </section>
     </footer>
 </body>

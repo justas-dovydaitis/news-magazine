@@ -105,8 +105,15 @@
 .bar input[type=search] {
     border-radius: 12px;
     border: 0;
-    height: 25px;
+    height: 32px;
     width: 10rem;
+}
+
+.bar input[type=search]~div.icon {
+    display: inline-block;
+    position: relative;
+    left: -3rem;
+    top: .7rem;
 }
 
 .bar date {

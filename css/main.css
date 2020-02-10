@@ -33,15 +33,6 @@ a {
     color: white;
 }
 
-.icon {
-    padding: 10px;
-    min-width: 40px;
-    position: absolute;
-    color: #000000;
-    right: 0px;
-    padding: 2%;
-}
-
 hr.divider {
     line-height: 1.5rem;
     position: relative;
@@ -70,7 +61,6 @@ hr.divider:after {
     color: #000000;
     padding: 0 3rem;
     line-height: 1.5rem;
-    color: #000000;
     background-color: #FFFFFF;
     font-size: 1.5em;
     font-weight: 900;
