@@ -1,52 +1,208 @@
-.icon {
-    background-repeat: no-repeat;
-}
+/*******************
+    Chevron up 
+*******************/
 
-.icon.black {
-    background-image: url('../assets/black.png');
-}
-
-.icon.white {
-    background-image: url('../assets/white.png');
-}
-
-.icon.orange {
-    background-image: url('../assets/orange.png');
-}
-
-.icon.icon-search {
-    width: 21px;
-    height: 21px;
-    background-position: -39px -5px;
-}
-
-.icon.icon-chevron-up {
-    width: 19px;
-    height: 21px;
-    background-position: -36px -36px;
-    ;
-}
-
-.icon.icon-pinterest {
+.icon-chevron-up-b {
     width: 16px;
-    height: 21px;
-    background-position: -70px -5px;
+    height: 17px;
+    background: url('../assets/css_sprites.png') -10px -127px;
 }
 
-.icon.icon-twitter {
-    width: 21px;
-    height: 21px;
-    background-position: -5px -36px;
+.icon-chevron-up-o {
+    width: 16px;
+    height: 17px;
+    background: url('../assets/css_sprites.png') -46px -127px;
 }
 
-.icon.icon-youtube {
-    width: 24px;
-    height: 21px;
-    background-position: -5px -5px;
+.icon-chevron-up-w {
+    width: 16px;
+    height: 17px;
+    background: url('../assets/css_sprites.png') -82px -127px;
 }
 
-.icon.icon-facebook {
-    width: 13px;
-    height: 21px;
-    background-position: -70px -36px;
+div[class^="icon-chevron-up"].hover-orange:hover {
+    background-position: -46px -127px;
+}
+
+div[class^="icon-chevron-up"].hover-white:hover {
+    background-position: -82px -127px;
+}
+
+div[class^="icon-chevron-up"].hover-black:hover {
+    background-position: -10px -127px
+}
+
+
+/*******************
+    facebook 
+*******************/
+
+.icon-facebook-b {
+    width: 12px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -164px -10px;
+}
+
+.icon-facebook-o {
+    width: 12px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -164px -49px;
+}
+
+.icon-facebook-w {
+    width: 12px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -164px -88px;
+}
+
+div[class^="icon-facebook"].hover-orange:hover {
+    background-position: -164px -49px;
+}
+
+div[class^="icon-facebook"].hover-white:hover {
+    background-position: -164px -88px;
+}
+
+div[class^="icon-facebook"].hover-black:hover {
+    background-position: -164px -10px;
+}
+
+
+/*******************
+    Pinterest
+*******************/
+
+.icon-pinterest-b {
+    width: 15px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -129px -10px;
+}
+
+.icon-pinterest-o {
+    width: 15px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -129px -49px;
+}
+
+.icon-pinterest-w {
+    width: 15px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -129px -88px;
+}
+
+div[class^="icon-pinterest"].hover-orange:hover {
+    background-position: -129px -49px;
+}
+
+div[class^="icon-pinterest"].hover-white:hover {
+    background-position: -129px -88px;
+}
+
+div[class^="icon-pinterest"].hover-black:hover {
+    background-position: -129px -10px;
+}
+
+
+/*******************
+    Search 
+*******************/
+
+.icon-search-b {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -50px -49px;
+}
+
+.icon-search-o {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -90px -10px;
+}
+
+.icon-search-w {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -90px -49px;
+}
+
+div[class^="icon-search"].hover-orange:hover {
+    background-position: -90px -10px;
+}
+
+div[class^="icon-search"].hover-white:hover {
+    background-position: -90px -49px;
+}
+
+div[class^="icon-search"].hover-black:hover {
+    background-position: -50px -49px;
+}
+
+
+/*******************
+    Twitter
+*******************/
+
+.icon-twitter-b {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -10px -88px;
+}
+
+.icon-twitter-o {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -49px -88px;
+}
+
+.icon-twitter-w {
+    width: 19px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -88px -88px;
+}
+
+div[class^="icon-twitter"].hover-orange:hover {
+    background-position: -49px -88px;
+}
+
+div[class^="icon-twitter"].hover-white:hover {
+    background-position: -88px -88px;
+}
+
+div[class^="icon-twitter"].hover-black:hover {
+    background-position: -10px -88px;
+}
+
+
+/*******************
+   Youtube 
+*******************/
+
+.icon-youtube-b {
+    width: 20px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -10px -10px;
+}
+
+.icon-youtube-o {
+    width: 20px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -50px -10px;
+}
+
+.icon-youtube-w {
+    width: 20px;
+    height: 19px;
+    background: url('../assets/css_sprites.png') -10px -49px;
+}
+
+div[class^="icon-youtube"].hover-orange:hover {
+    background-position: -50px -10px;
+}
+
+div[class^="icon-youtube"].hover-white:hover {
+    background-position: -50px -10px;
+}
+
+div[class^="icon-youtube"].hover-black:hover {
+    background-position: -10px -10px;
 }

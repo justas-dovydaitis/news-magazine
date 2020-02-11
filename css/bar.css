@@ -117,11 +117,15 @@
     width: 10rem;
 }
 
-.bar input[type=search]~div.icon {
+.bar input[type=search]~div.icon-search-b {
     display: inline-block;
     position: relative;
     left: -3rem;
     top: .4rem;
+}
+
+.bar input[type=search]:focus~div.icon-search-b {
+    background-position: -90px -10px;
 }
 
 .bar date {

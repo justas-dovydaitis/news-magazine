@@ -61,6 +61,10 @@ footer>section.bottom-footer .scroll-top {
     padding: .35rem;
 }
 
+footer div[class^="icon"] {
+    margin: 0 auto;
+}
+
 footer a {
     color: #000000;
     font-weight: 600;
