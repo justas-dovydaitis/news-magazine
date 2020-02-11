@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+// const categorySchema = require('./category').schema;
 const Schema = mongoose.Schema;
 
-const placesSchema = new Schema({
+
+const postSchema = new Schema({
     title: {
         type: 'String',
         required: true
@@ -17,6 +19,7 @@ const placesSchema = new Schema({
     created: {
         type: ['Date'],
         required: true,
+        immutable: true,
         default: new Date()
     },
     lastUpdated: {
@@ -24,6 +27,15 @@ const placesSchema = new Schema({
         required: true,
         default: new Date()
     },
+    categories: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Category',
+        unique: true,
+        required: true
+    }]
 });
 
-module.exports = mongoose.model('place', placesSchema);
+module.exports = {
+    model: mongoose.model('Post', postSchema),
+    schema: postSchema
+};

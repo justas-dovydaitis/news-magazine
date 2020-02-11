@@ -1,16 +1,16 @@
+const Category = require('../models/category').model;
 const Post = require('../models/post').model;
-// const Category = require('../models/category').model;
+
 const InternalError = {
     '_message': 'Database error',
     'message': 'Database error',
     'name': 'Internal server error'
 };
 module.exports = {
-    // POST /posts/:postId/
     create: (req, res) => {
-        Post.create(req.body)
-            .then((post) => {
-                res.status(201).json(post);
+        Category.create(req.body)
+            .then((category) => {
+                res.status(201).json(category);
             })
             .catch((errors) => {
                 if (errors)
@@ -20,32 +20,30 @@ module.exports = {
                 });
             });
     },
-    // GET /posts/:postId/
-    get: (req, res) => {
-        Post.findById(req.params.postId)
-            .populate('categories')
-            .then((post) => {
-                if (!post)
+    read: (req, res) => {
+        Category.findById(req.params.categoryId)
+            .then((category) => {
+                if (!category)
                     res.status(404).json({ errors: 'Not found' });
                 else
-                    res.status(200).json(post);
+                    res.status(200).json(category);
             })
             .catch((errors) => {
                 if (errors)
                     res.status(400).json(errors);
-                else res.status(500).json({
-                    errors: InternalError
-                });
+                else
+                    res.status(500).json({
+                        errors: InternalError
+                    });
             });
     },
-    // PUT /posts/:postId/
     update: (req, res) => {
-        Post.findByIdAndUpdate(req.params.postId)
-            .then((post) => {
-                if (!post)
+        Category.findByIdAndUpdate(req.params.categoryId)
+            .then((category) => {
+                if (!category)
                     res.status(404).json({ errors: 'Not found' });
                 else
-                    res.status(200).json(post);
+                    res.status(200).json(category);
             })
             .catch((errors) => {
                 if (errors)
@@ -55,9 +53,8 @@ module.exports = {
                 });
             });
     },
-    // DELETE /posts/:postId/
     delete: (req, res) => {
-        Post.findByIdAndDelete(req.params.postId)
+        Category.findByIdAndDelete(req.params.categoryId)
             .then(() => {
                 res.status(204).json({});
             })
@@ -69,32 +66,25 @@ module.exports = {
                 });
             });
     },
-    // GET /posts/
     list: (req, res) => {
-        Post.find({})
-            .populate('categories')
-            .then((posts) => {
-                res.status(200).json(posts);
+        Category.find({})
+            .then((categories) => {
+                res.status(200).json(categories);
             })
             .catch((errors) => {
                 res.status(500).json({ errors });
             });
     },
-    // GET /posts/:postId/categories/
-    getCategories: (req, res) => {
-        Post.findById(req.params.postId)
-            .populate('categories')
-            .then((post) => {
-                if (!post)
-                    res.status(304).json({ errors: 'Post not found' });
+    postsList: (req, res) => {
+        Post.find({ categories: req.params.categoryId })
+            .then((posts) => {
+                if (!posts)
+                    res.status(404).json({ error: 'Not found' });
                 else
-                    res.status(200).json(post.categories);
+                    res.status(200).json(posts);
+            })
+            .catch((errors) => {
+                res.status(400).json(errors);
             });
-    },
-    // POST /posts/:postId/categories/
-    // addCategories: (req, res) => {},
-
-    // DELETE /posts/:postId/categories/:categoryId
-    // deleteCategory: (req, res) => {},
-
+    }
 };
