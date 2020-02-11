@@ -15,6 +15,9 @@
 
 .bar.top-bar {
     flex-flow: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 .bar.top-bar .item {
@@ -61,13 +64,19 @@
     transition: color ease-in-out 0.5s;
 }
 
+.bar.bottom-bar .item.active {
+    background-color: #FF4500;
+    color: #FFFFFF;
+}
+
 .bar.bottom-bar .item:not(.active):hover {
     color: #FF4500;
 }
 
-.bar.bottom-bar .item:focus {
+
+/* .bar.bottom-bar .item:focus {
     background-color: #FF4500;
-}
+} */
 
 .bar.bar.bottom-bar .item:focus:hover {
     color: #FFFFFF;
@@ -108,11 +117,15 @@
     width: 10rem;
 }
 
-.bar input[type=search]~div.icon {
+.bar input[type=search]~div.icon-search-b {
     display: inline-block;
     position: relative;
     left: -3rem;
-    top: .7rem;
+    top: .4rem;
+}
+
+.bar input[type=search]:focus~div.icon-search-b {
+    background-position: -90px -10px;
 }
 
 .bar date {

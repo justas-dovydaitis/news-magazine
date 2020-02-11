@@ -31,11 +31,12 @@ footer>section.content .search {
     width: 100%;
 }
 
-footer>section.content .search>button {
+footer>section.content .search>a {
     width: 2rem;
     height: 2rem;
     border: 1px solid #000000;
     background-color: #000000;
+    padding: 0.2rem;
 }
 
 footer>section.content .search>input {
@@ -57,7 +58,11 @@ footer>section.bottom-footer .scroll-top {
     background-color: #000000;
     width: 2rem;
     height: 2rem;
-    padding: .75rem;
+    padding: .35rem;
+}
+
+footer div[class^="icon"] {
+    margin: 0 auto;
 }
 
 footer a {
