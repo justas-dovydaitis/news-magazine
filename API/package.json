@@ -1,0 +1,33 @@
+{
+    "name": "news-magazine-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "develop": "SET NODE_ENV=development & env-cmd -f ./.env nodemon ./index.js",
+        "start": "node ./index.js NODE_ENV=production -f ./.env",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/justas-dovydaitis/news-magazine.git"
+    },
+    "author": "Justas Dovydaitis | Visma Lietuva",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/justas-dovydaitis/news-magazine/issues"
+    },
+    "homepage": "https://github.com/justas-dovydaitis/news-magazine#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.8.11"
+    },
+    "devDependencies": {
+        "env-cmd": "^10.1.0",
+        "eslint": "^6.8.0",
+        "morgan": "^1.9.1",
+        "nodemon": "^2.0.2"
+    }
+}
