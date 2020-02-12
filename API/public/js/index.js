@@ -1,5 +1,5 @@
 /* global document,XMLHttpRequest humanized_time_span */
-const createPostImage = (postData) => {
+function createPostImage(postData) {
     const figure = document.createElement('figure');
     const image = document.createElement('img');
     image.setAttribute('src', postData.imageUrl);
@@ -7,54 +7,61 @@ const createPostImage = (postData) => {
     image.setAttribute('alt', postData.imageAlt);
     figure.appendChild(image);
     return figure;
-};
-const createLink = (where) => {
+}
+
+function createLink(where) {
     const link = document.createElement('a');
     link.setAttribute('href', where);
     return link;
-};
-const createPostTags = (postData) => {
+}
+
+function createPostTags(postData) {
     const tags = document.createElement('div');
     tags.setAttribute('class', 'tags');
 
-    postData.categories.forEach(cat => {
+    postData.categories.forEach(function(cat) {
         const tag = document.createElement('a');
         tag.innerText = cat.name;
         tag.setAttribute('href', 'javascript:void(0)');
         tags.appendChild(tag);
     });
     return tags;
-};
-const createPostDetails = () => {
+}
+
+function createPostDetails() {
     const article = document.createElement('article');
     article.setAttribute('class', 'details');
     return article;
-};
-const createPostHeading = (postData) => {
+}
+
+function createPostHeading(postData) {
     const heading = document.createElement('h3');
     heading.setAttribute('title', postData.title);
     heading.innerText = postData.title;
     return heading;
-};
-const createPostContent = (postData) => {
+}
+
+function createPostContent(postData) {
     const paragraph = document.createElement('p');
     paragraph.innerText = postData.content;
     return paragraph;
-};
-const createPost = (postData, type = 'basic' | 'latest' | 'featured') => {
+}
+
+function createPost(postData, type) {
     let post = document.createElement('div');
-    post.setAttribute('class', `post ${new Date(postData.created).getTime() > (new Date().getTime() - 1000 * 60 * 60 ) ? 'new': ''}`);
+    let isNew = new Date(postData.created).getTime() > (new Date().getTime() - 1000 * 60 * 60) ? 'new' : '';
+    post.setAttribute('class', 'post ' + isNew);
 
     const image = createPostImage(postData);
 
-    const imgLink = createLink('javascript:void(0');
+    const imgLink = createLink('javascript:void(0)');
     imgLink.appendChild(image);
     post.appendChild(type === 'featured' ? image : imgLink);
 
     const details = createPostDetails();
     post.appendChild(details);
 
-    if (type != 'latest') {
+    if (type !== 'latest') {
         details.appendChild(createPostTags(postData));
     }
     const heading = createPostHeading(postData);
@@ -71,8 +78,9 @@ const createPost = (postData, type = 'basic' | 'latest' | 'featured') => {
         details.appendChild(time);
     }
     return post;
-};
-const fetchPosts = () => {
+}
+
+function fetchPosts() {
     const postContainer = document.querySelector('.posts');
     const latestPostContainer = document.querySelector('.latest.posts');
     const featuredPostContainer = document.querySelector('.featured-post-container');
@@ -80,7 +88,7 @@ const fetchPosts = () => {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(xhttp.responseText);
-            response.forEach((post, index) => {
+            response.forEach(function(post, index) {
                 if (index < 4) {
                     featuredPostContainer.appendChild(createPost(post, 'featured'));
                 }
@@ -91,5 +99,5 @@ const fetchPosts = () => {
     };
     xhttp.open('GET', '/api/posts', true);
     xhttp.send();
-};
+}
 document.onload = fetchPosts();
