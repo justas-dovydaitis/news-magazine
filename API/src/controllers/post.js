@@ -72,6 +72,7 @@ module.exports = {
     // GET /posts/
     list: (req, res) => {
         Post.find({})
+            .sort({ created: -1 })
             .populate('categories')
             .then((posts) => {
                 res.status(200).json(posts);

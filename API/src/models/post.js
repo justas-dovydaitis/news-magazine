@@ -8,29 +8,36 @@ const postSchema = new Schema({
         type: 'String',
         required: true
     },
-    images: {
-        type: ['String'],
+    imageUrl: {
+        type: 'String',
         required: false
     },
-    text: {
+    imageAlt: {
+        type: 'String',
+        required: false
+    },
+    imagTitle: {
+        type: 'String',
+        required: false
+    },
+    content: {
         type: 'String',
         required: true
     },
     created: {
-        type: ['Date'],
+        type: 'Date',
         required: true,
         immutable: true,
         default: new Date()
     },
     lastUpdated: {
-        type: ['Date'],
+        type: 'Date',
         required: true,
         default: new Date()
     },
     categories: [{
         type: mongoose.Schema.ObjectId,
         ref: 'Category',
-        unique: true,
         required: true
     }]
 });

@@ -18,13 +18,13 @@ if (environment !== 'production') {
     const logger = require('morgan');
     app.use(logger('dev'));
 }
-app.use('/', express.static(path.join(__dirname, '..', 'public')));
+app.use('/', express.static(path.join(__dirname, '.', 'public')));
 app.use(bodyParser.json());
 app.use('/api/', routes(router));
 
 
 app.listen(`${stage.port}`, () => {
-    console.log(`Server now listening at localhost:${stage.port}`);
+    console.log(`Server now listening at http://localhost:${stage.port}`);
 });
 
 module.exports = app;
