@@ -35,6 +35,11 @@ const postSchema = new Schema({
         required: true,
         default: new Date()
     },
+    featured: {
+        type: 'Boolean',
+        required: true,
+        default: false
+    },
     categories: [{
         type: mongoose.Schema.ObjectId,
         ref: 'Category',

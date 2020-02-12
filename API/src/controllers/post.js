@@ -71,11 +71,35 @@ module.exports = {
     },
     // GET /posts/
     list: (req, res) => {
+        let result = {};
         Post.find({})
             .sort({ created: -1 })
+            .limit(10)
             .populate('categories')
-            .then((posts) => {
-                res.status(200).json(posts);
+            .then((latestPosts) => {
+                result.latest = latestPosts;
+                Post.find({ featured: true })
+                    .limit(4)
+                    .sort({ created: -1 })
+                    .populate('categories')
+                    .then((featuredPosts) => {
+                        result.featured = featuredPosts;
+                        Post.find({})
+                            // .sample(4)
+                            .skip(10 * (req.query.page - 1))
+                            .limit(10)
+                            .populate('categories')
+                            .then((allPosts) => {
+                                result.allPosts = allPosts;
+                                res.status(200).json(result);
+                            })
+                            .catch((errors) => {
+                                res.status(500).json({ errors });
+                            });
+                    })
+                    .catch((errors) => {
+                        res.status(500).json({ errors });
+                    });
             })
             .catch((errors) => {
                 res.status(500).json({ errors });

@@ -81,20 +81,25 @@ function createPost(postData, type) {
 }
 
 function fetchPosts() {
+
     const postContainer = document.querySelector('.posts');
     const latestPostContainer = document.querySelector('.latest.posts');
     const featuredPostContainer = document.querySelector('.featured-post-container');
-    var xhttp = new XMLHttpRequest();
+
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(xhttp.responseText);
-            response.forEach(function(post, index) {
-                if (index < 4) {
-                    featuredPostContainer.appendChild(createPost(post, 'featured'));
-                }
-                postContainer.appendChild(createPost(post, 'basic'));
-                latestPostContainer.appendChild(createPost(post, 'latest'));
-            });
+
+            for (let i = 0; i < response.featured.length; i++) {
+                featuredPostContainer.appendChild(createPost(response.featured[i], 'featured'));
+            }
+            for (let i = 0; i < response.allPosts.length; i++) {
+                postContainer.appendChild(createPost(response.allPosts[i], 'basic'));
+            }
+            for (let i = 0; i < response.latest.length; i++) {
+                latestPostContainer.appendChild(createPost(response.latest[i], 'latest'));
+            }
         }
     };
     xhttp.open('GET', '/api/posts', true);
