@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700|Roboto&display=swap" rel="stylesheet">
 
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/bar.css" />
-    <link rel="stylesheet" href="./css/post.css" />
-    <link rel="stylesheet" href="./css/featured-container.css" />
-    <link rel="stylesheet" href="./css/post-container.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/sprites.css" />
+    <title>New post</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/bar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/sprites.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/file-input.css" />
+    <link rel="stylesheet" href="./css/select.css" />
+    <link rel="stylesheet" href="../css/spacing.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
 
-    <link rel="stylesheet" href="./css/spacing.css" />
-    <link rel="stylesheet" href="./css/utilities.css" />
+    <style>
+        form {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +34,7 @@
             <a class="item" href="javascript:void(0);">
                 Latest
             </a>
-            <a class="item" href="./life">
+            <a class="item" href="../life">
                 Life
             </a>
             <a class="item" href="javascript:void(0);">
@@ -56,6 +63,7 @@
         </div>
     </div>
     <header id="top">
+
         <div class="cover">
             <h1 class="center-y px-5 m-0">Magazine</h1>
         </div>
@@ -67,10 +75,11 @@
             <div>
                 <input class="px-3" type="search" placeholder="Search..." />
                 <div class="icon-search-b"></div>
+
             </div>
             <nav>
-                <a class="item active" href="./">Home</a>
-                <a class="item" href="./life">Life</a>
+                <a class="item" href="../">Home</a>
+                <a class="item" href="../life/">Life</a>
                 <a class="item" href="javascript:void(0);">Vintage</a>
                 <a class="item" href="javascript:void(0);">Latest</a>
                 <a class="item" href="javascript:void(0);">Travel</a>
@@ -80,18 +89,48 @@
         </div>
     </header>
     <main class="px-5">
-        <section class="py-3 featured-post-container"> </section>
-        <section class="post-container">
-            <div class="posts">
-                <hr class="divider" data-content="POSTS">
-                <div class="post-controls py-2">
-                    <a class="btn-add-post" href="../new-post">Add post</a>
+        <h2>Add new post</h2>
+        <form method="POST" action="" id="addPostForm">
+            <label for="title">Title</label>
+            <input name="tile" type="text" placeholder="Title" required />
+
+            <label for="content">Content</label>
+            <textarea name="content" placeholder="Content text" required></textarea>
+            <label for="image">Image</label>
+            <div class="file-area">
+
+                <input type="file" name="image" id="image" accept="image/x-png,image/gif,image/jpeg" required />
+                <div class="file-dummy">
+                    <figure class="preview-image">
+                    </figure>
+                    <div class="success">Great, your image is selected. Keep on.</div>
+                    <div class="default">Please select image or drag it in here</div>
                 </div>
             </div>
-            <aside class="latest posts">
-                <h3 class="text-uppercase">latest posts</h3>
-            </aside>
-        </section>
+
+            <label for="photoTitle">Image title</label>
+            <input name='photoTitle' type="text" required />
+
+            <label for="photoAlt">Image alternative text</label>
+            <input name='photoAlt' type="text" required />
+
+            <label for="tags">Tags</label>
+            <div class="select-container">
+
+                <select name="tags" id="select" multiple>
+                    <option>Thing1</option>
+                    <option>Thing 2</option>
+                    <option>Thing 8</option>
+                </select>
+                <div class="selected">
+
+                </div>
+            </div>
+            <div>
+                <button name='submit' type="submit">Save</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
     </main>
     <footer class="mt-2">
         <section class="content pt-2">
@@ -101,15 +140,14 @@
                     <li><a href="javascript:void(0)">Lorem ipsum</a></li>
                     <li><a href="javascript:void(0)">Lorem ipsum</a></li>
                     <li><a href="javascript:void(0)">Lorem ipsum</a></li>
-
                 </ul>
             </div>
             <div>
                 <h3 class="mt-0">Recent Comments</h3>
                 <ul>
                     <li><a href="javascript:void(0)">Lorem ipsum</a> on <a href="javascript:void(0)">Helo world!</a></li>
-                    <li><a href="javascript:void(0)">Lorem ipsum</a>on <a href="javascript:void(0)">Helo world!</a></li>
-                    <li><a href="javascript:void(0)">Lorem ipsum</a>on <a href="javascript:void(0)">Helo world!</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a> on <a href="javascript:void(0)">Helo world!</a></li>
+                    <li><a href="javascript:void(0)">Lorem ipsum</a> on <a href="javascript:void(0)">Helo world!</a></li>
                 </ul>
             </div>
             <div class="search" style=" display:flex;">
@@ -128,7 +166,9 @@
             </a>
         </section>
     </footer>
-    <script src="https://rawgit.com/GrouchPotato/js_humanized_time_span/master/humanized_time_span.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/texxtArea.js"></script>
+    <script src="./js/fileInput.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
