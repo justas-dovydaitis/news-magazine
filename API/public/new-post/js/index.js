@@ -1,12 +1,19 @@
-/* global document XMLHttpRequest */
+/* global document XMLHttpRequest select */
 let xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+xhttp.addEventListener('load', function() {
+    if (xhttp.status === 200) {
         let response = JSON.parse(xhttp.responseText);
-
+        for (let i = 0; i < response.length; i++) {
+            let option = document.createElement('option');
+            option.innerText = response[i].name;
+            option.value = response[i]._id;
+            select.appendChild(option);
+        }
+        console.log(response)
     }
-};
-xhttp.open('GET', '/api/posts', true);
+});
+
+xhttp.open('GET', '/api/categories', true);
 xhttp.send();
 
 function postPost(e) {

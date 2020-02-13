@@ -11,7 +11,6 @@ function createSelected(option) {
     selectedItem.innerText = option.innerText;
     selectedItem.onclick = function(event) {
         option.selected = false;
-        console.log(event);
         event.target.parentNode.removeChild(event.target);
     };
     return selectedItem;
