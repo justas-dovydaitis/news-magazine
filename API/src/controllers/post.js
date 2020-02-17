@@ -8,7 +8,7 @@ const InternalError = {
 module.exports = {
     // POST /posts/:postId/
     create: (req, res) => {
-        Post.create(req.body)
+        Post.create({...req.body /*, imageUrl: '/uploads/' + req.file.filename*/ })
             .then((post) => {
                 res.status(201).json(post);
             })
@@ -116,10 +116,4 @@ module.exports = {
                     res.status(200).json(post.categories);
             });
     },
-    // POST /posts/:postId/categories/
-    // addCategories: (req, res) => {},
-
-    // DELETE /posts/:postId/categories/:categoryId
-    // deleteCategory: (req, res) => {},
-
 };

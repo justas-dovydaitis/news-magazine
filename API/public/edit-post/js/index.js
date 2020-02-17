@@ -74,7 +74,7 @@ function deletePost() {
 }
 
 function createPost() {
-    throw new Error('Not implemented');
+    console.log('wtf');
 }
 
 function updatePost() {
@@ -113,8 +113,9 @@ const saveRequest = parsedQuery && parsedQuery.id ?
 
 
 const submitButton = document.querySelector('#submitButton');
-submitButton.onclick = function() {
-    if (confirm('You really wanna update it?')) {
+submitButton.onclick = function(event) {
+    event.preventDefault();
+    if (confirm('You really save it?')) {
         saveRequest.send(JSON.stringify(createRequestBody()));
     }
 };

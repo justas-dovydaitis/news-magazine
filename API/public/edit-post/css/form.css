@@ -3,9 +3,22 @@ form {
     margin: 0 auto;
 }
 
+form input,
+form label {
+    display: block;
+}
+
+form .form-group input {
+    width: 100%;
+}
+
 form label {
     margin-top: 1.5rem;
     margin-bottom: .7rem;
+}
+
+form .form-group.required label:after {
+    content: '*';
 }
 
 form input:focus,
@@ -16,7 +29,7 @@ form textarea:focus {
 
 form input,
 form textarea {
-    border: 1px solid black;
+    border: 1px solid #000000;
     min-height: 2rem;
     padding-left: .5rem;
     padding-right: .5rem;
