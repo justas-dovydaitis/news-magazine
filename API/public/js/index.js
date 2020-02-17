@@ -54,7 +54,7 @@ function createPost(postData, type) {
 
     const image = createPostImage(postData);
 
-    const imgLink = createLink('javascript:void(0)');
+    const imgLink = createLink('/edit-post?id=' + postData._id);
     imgLink.appendChild(image);
     post.appendChild(type === 'featured' ? image : imgLink);
 

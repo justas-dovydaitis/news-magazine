@@ -92,10 +92,10 @@
         <h2>Add new post</h2>
         <form method="POST" action="" id="addPostForm">
             <label for="title">Title</label>
-            <input name="tile" type="text" placeholder="Title" required />
+            <input id="title" name="tile" type="text" placeholder="Title" required />
 
             <label for="content">Content</label>
-            <textarea name="content" placeholder="Content text" required></textarea>
+            <textarea id="content" name="content" placeholder="Content text" required></textarea>
             <label for="image">Image</label>
             <div class="file-area">
 
@@ -108,11 +108,11 @@
                 </div>
             </div>
 
-            <label for="photoTitle">Image title</label>
-            <input name='photoTitle' type="text" required />
+            <label for="imageTitle">Image title</label>
+            <input id="imageTitle" name='imageTitle' type="text" required />
 
-            <label for="photoAlt">Image alternative text</label>
-            <input name='photoAlt' type="text" required />
+            <label for="imageAlt">Image alternative text</label>
+            <input id="imageAlt" name='imageAlt' type="text" required />
 
             <label for="tags">Tags</label>
             <div class="select-container">
@@ -120,8 +120,9 @@
                 <div class="selected"> </div>
             </div>
             <div>
-                <button name='submit' type="submit">Save</button>
-                <button type="reset">Cancel</button>
+                <button id="submitButton" name="submit" type="submit" disabled>Save</button>
+                <button id="deleteButton" hidden name="delete" type="delete" disabled>Delete</button>
+                <button id="saveButton" type="reset" onclick="deletePost">Cancel</button>
             </div>
         </form>
     </main>
@@ -154,15 +155,17 @@
             <p>
                 &copy; Justas Dovydaitis | Completely maintain next-generation collaboration and idea-sharing with.
             </p>
-            <a class="scroll-top " href="javascript:void(0)">
+            <a class="scroll-top " href="#top">
                 <div class="icon-chevron-up-w hover-orange"></div>
             </a>
         </section>
     </footer>
+
     <script src="./js/select.js"></script>
     <script src="./js/texxtArea.js"></script>
     <script src="./js/fileInput.js"></script>
-    <script src="./js/index.js"></script>
+    <script defer src="./js/index.js"></script>
+
 </body>
 
 </html>
