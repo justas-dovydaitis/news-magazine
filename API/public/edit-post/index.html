@@ -89,7 +89,7 @@
         </div>
     </header>
     <main class="px-5">
-        <form id="addPostForm">
+        <form id="addPostForm" enctype="multipart/form-data">
             <h2 id="form-header">Add new post</h2>
             <div class="form-group required">
                 <label for="title">Title</label>
@@ -115,16 +115,23 @@
                 <label for="imageTitle">Image title</label>
                 <input id="imageTitle" name='imageTitle' type="text" required />
             </div>
+
             <div class="form-group required">
                 <label for="imageAlt">Image alternative text</label>
                 <input id="imageAlt" name='imageAlt' type="text" required />
             </div>
+
             <div class="form-group required">
                 <label for="tags">Tags</label>
                 <div class="select-container">
                     <select id="select" multiple></select>
                     <div class="selected"> </div>
                 </div>
+            </div>
+            <div class="form-group--inline">
+                <input id="featured" name='featured' type="checkbox" />
+                <label for="featured">Add this post to featured section</label>
+
             </div>
             <div>
                 <button id="submitButton" name="submit" type="submit">Save</button>

@@ -1,5 +1,6 @@
 const Post = require('../models/post').model;
-// const Category = require('../models/category').model;
+const upload = require('../../multer').upload;
+
 const InternalError = {
     '_message': 'Database error',
     'message': 'Database error',
@@ -8,17 +9,24 @@ const InternalError = {
 module.exports = {
     // POST /posts/:postId/
     create: (req, res) => {
-        Post.create({...req.body /*, imageUrl: '/uploads/' + req.file.filename*/ })
-            .then((post) => {
-                res.status(201).json(post);
-            })
-            .catch((errors) => {
-                if (errors)
-                    res.status(400).json(errors);
-                else res.status(500).json({
-                    errors: InternalError
+        const requestBody = req.body;
+        upload(req, res, errors => {
+            console.log(requestBody, req.body);
+            if (errors) {
+                return res.status(400).json({ errors: 'Error uploading file.' });
+            }
+            Post.create({...requestBody, imageUrl: '/uploads/' + req.file.filename, categories: requestBody.categories.split(',') })
+                .then((post) => {
+                    res.status(201).json(post);
+                })
+                .catch((errors) => {
+                    if (errors)
+                        res.status(400).json(errors);
+                    else res.status(500).json({
+                        errors: InternalError
+                    });
                 });
-            });
+        });
     },
     // GET /posts/:postId/
     get: (req, res) => {

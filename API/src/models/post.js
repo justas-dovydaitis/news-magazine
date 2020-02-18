@@ -16,7 +16,7 @@ const postSchema = new Schema({
         type: 'String',
         required: false
     },
-    imagTitle: {
+    imageTitle: {
         type: 'String',
         required: false
     },

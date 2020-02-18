@@ -1,13 +1,14 @@
-/* global window document XMLHttpRequest select Event alert confirm selectedItemsValues */
+/* global window document XMLHttpRequest select Event alert confirm selectedItemsValues FormData */
 const formFields = {
     title: document.querySelector('#title'),
     content: document.querySelector('#content'),
     image: document.querySelector('#image'),
-    imagePreview: document.querySelector('#image~.file-dummy>.preview-image'),
     imageTitle: document.querySelector('#imageTitle'),
     imageAlt: document.querySelector('#imageAlt'),
-    tags: document.querySelector('#select')
+    tags: document.querySelector('#select'),
+    featured: document.querySelector('#featured'),
 };
+const imagePreviewWrapper = document.querySelector('#image~.file-dummy>.preview-image');
 
 function parseQuery(queryString) {
     var query = {};
@@ -45,7 +46,7 @@ function loadPostData() {
 
         let imagePreview = document.createElement('img');
         imagePreview.src = response.imageUrl;
-        formFields.imagePreview.appendChild(imagePreview);
+        imagePreviewWrapper.appendChild(imagePreview);
         // formFields.image.files.add(new File())
 
         let options = formFields.tags.options;
@@ -85,19 +86,20 @@ function createHttpRequest(type, url, onloadFunc) {
     let req = new XMLHttpRequest();
     req.addEventListener('load', onloadFunc);
     req.open(type, url, true);
-    req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    // req.setRequestHeader('Content-Type', 'multipart/form-data');
     return req;
 }
 
 function createRequestBody() {
-    return {
-        title: formFields.title.value,
-        content: formFields.content.value,
-        imageTitle: formFields.imageTitle.value,
-        imageAlt: formFields.imageAlt.value,
-        imageUrl: 'https://via.placeholder.com/300/444444?text=News+Magazine',
-        categories: selectedItemsValues
-    };
+    let reqBody = new FormData();
+    reqBody.append('imageUrl', formFields.image.files[0]);
+    reqBody.append('imageAlt', formFields.imageAlt.value);
+    reqBody.append('imageTitle', formFields.imageTitle.value);
+    reqBody.append('content', formFields.content.value);
+    reqBody.append('title', formFields.title.value);
+    reqBody.append('categories', selectedItemsValues.map(option => { return option.value; }));
+    reqBody.append('featured', formFields.featured.checked);
+    return reqBody;
 }
 const parsedQuery = parseQuery(window.location.search);
 const loadTagsRequest = createHttpRequest('GET', '/api/categories', loadOptions);
@@ -115,8 +117,10 @@ const saveRequest = parsedQuery && parsedQuery.id ?
 const submitButton = document.querySelector('#submitButton');
 submitButton.onclick = function(event) {
     event.preventDefault();
+    let body = createRequestBody();
+    console.log(body);
     if (confirm('You really save it?')) {
-        saveRequest.send(JSON.stringify(createRequestBody()));
+        saveRequest.send(body);
     }
 };
 
