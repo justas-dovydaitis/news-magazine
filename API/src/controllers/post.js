@@ -1,5 +1,6 @@
 const Post = require('../models/post').model;
 const upload = require('../../multer').upload;
+const mongoose = require('mongoose');
 
 const InternalError = {
     '_message': 'Database error',
@@ -30,6 +31,10 @@ module.exports = {
     },
     // GET /posts/:postId/
     get: (req, res) => {
+        if (!mongoose.Types.ObjectId.isValid(req.params.postId)) {
+            res.status(404).json({ errors: 'Post id is bad' });
+        }
+
         Post.findById(req.params.postId)
             .populate('categories')
             .then((post) => {

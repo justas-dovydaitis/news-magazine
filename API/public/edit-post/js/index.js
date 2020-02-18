@@ -47,7 +47,8 @@ function loadPostData() {
         let imagePreview = document.createElement('img');
         imagePreview.src = response.imageUrl;
         imagePreviewWrapper.appendChild(imagePreview);
-        // formFields.image.files.add(new File())
+
+        formFields.featured.checked = response.featured;
 
         let options = formFields.tags.options;
         for (let i = 0; i < options.length; i++) {
