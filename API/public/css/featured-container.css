@@ -1,7 +1,7 @@
 .featured-post-container {
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .featured-post-container .post {
@@ -10,10 +10,29 @@
     width: 100%;
 }
 
-.featured-post-container .post img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.featured-post-container .post figure {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.featured-post-container .post figure img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+@supports (object-fit: cover) {
+    .featured-post-container .post figure {
+        height: auto
+    }
+    .featured-post-container .post img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .featured-post-container .post>.details {

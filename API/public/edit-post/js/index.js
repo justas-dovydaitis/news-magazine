@@ -93,7 +93,8 @@ function createHttpRequest(type, url, onloadFunc) {
 
 function createRequestBody() {
     let reqBody = new FormData();
-    reqBody.append('imageUrl', formFields.image.files[0]);
+
+    formFields.image.files[0] && reqBody.append('imageUrl', formFields.image.files[0]);
     reqBody.append('imageAlt', formFields.imageAlt.value);
     reqBody.append('imageTitle', formFields.imageTitle.value);
     reqBody.append('content', formFields.content.value);

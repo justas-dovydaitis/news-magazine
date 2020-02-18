@@ -12,7 +12,6 @@ module.exports = {
     create: (req, res) => {
         const requestBody = req.body;
         upload(req, res, errors => {
-            console.log(requestBody, req.body);
             if (errors) {
                 return res.status(400).json({ errors: 'Error uploading file.' });
             }
@@ -53,23 +52,43 @@ module.exports = {
     },
     // PUT /posts/:postId/
     update: (req, res) => {
-        Post.findByIdAndUpdate(req.params.postId)
-            .then((post) => {
-                if (!post)
-                    res.status(404).json({ errors: 'Not found' });
-                else
-                    res.status(200).json(post);
-            })
-            .catch((errors) => {
-                if (errors)
-                    res.status(400).json(errors);
-                else res.status(500).json({
-                    errors: InternalError
+        if (!mongoose.Types.ObjectId.isValid(req.params.postId)) {
+            res.status(404).json({ errors: 'Post id is bad' });
+        }
+        const requestBody = req.body;
+        upload(req, res, errors => {
+            if (errors) {
+                return res.status(400).json({ errors: 'Error uploading file.' });
+            }
+            let update = {
+                ...requestBody,
+                categories: requestBody.categories.split(','),
+                imageUrl: '/uploads/' + (req.file && req.file.filename),
+                lastUpdated: new Date()
+            };
+            if (!req.file) delete update.imageUrl;
+
+            Post.findByIdAndUpdate(req.params.postId, update)
+                .then((post) => {
+                    if (!post)
+                        res.status(404).json({ errors: 'Not found' });
+                    else
+                        res.status(200).json(post);
+                })
+                .catch((errors) => {
+                    if (errors)
+                        res.status(400).json(errors);
+                    else res.status(500).json({
+                        errors: InternalError
+                    });
                 });
-            });
+        });
     },
     // DELETE /posts/:postId/
     delete: (req, res) => {
+        if (!mongoose.Types.ObjectId.isValid(req.params.postId)) {
+            res.status(404).json({ errors: 'Post id is bad' });
+        }
         Post.findByIdAndDelete(req.params.postId)
             .then(() => {
                 res.status(204).json({});
