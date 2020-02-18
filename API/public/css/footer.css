@@ -29,6 +29,7 @@ footer ul {
 
 footer>section.content .search {
     width: 100%;
+    display: flex;
 }
 
 footer>section.content .search>a {
@@ -61,7 +62,7 @@ footer>section.bottom-footer .scroll-top {
     padding: .35rem;
 }
 
-footer div[class^="icon"] {
+footer .icon {
     margin: 0 auto;
 }
 
