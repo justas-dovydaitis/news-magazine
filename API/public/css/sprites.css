@@ -1,35 +1,41 @@
+/* icons are 14px height, with proportional width. Has 10px padding between elements */
+
+.icon {
+    background-image: url('../assets/css_sprites (3).png');
+}
+
+
 /*******************
     Chevron up 
 *******************/
 
-.icon-chevron-up-b {
+.icon.icon__chevron-up {
     width: 16px;
     height: 17px;
-    background: url('../assets/css_sprites.png') -10px -127px;
 }
 
-.icon-chevron-up-o {
-    width: 16px;
-    height: 17px;
-    background: url('../assets/css_sprites.png') -46px -127px;
+.icon__chevron-up--color-dark {
+    background-position: -164px -10px;
 }
 
-.icon-chevron-up-w {
-    width: 16px;
-    height: 17px;
-    background: url('../assets/css_sprites.png') -82px -127px;
+.icon__chevron-up--color-light {
+    background-position: -10px -127px;
 }
 
-div[class^="icon-chevron-up"].hover-orange:hover {
-    background-position: -46px -127px;
+.icon__chevron-up--color-accent {
+    background-position: -164px -47px;
 }
 
-div[class^="icon-chevron-up"].hover-white:hover {
-    background-position: -82px -127px;
+.icon__chevron-up--hover-dark:hover {
+    background-position: -164px -10px;
 }
 
-div[class^="icon-chevron-up"].hover-black:hover {
-    background-position: -10px -127px
+.icon__chevron-up--hover-light:hover {
+    background-position: -10px -127px;
+}
+
+.icon__chevron-up--hover-accent:hover {
+    background-position: -164px -47px;
 }
 
 
@@ -37,34 +43,33 @@ div[class^="icon-chevron-up"].hover-black:hover {
     facebook 
 *******************/
 
-.icon-facebook-b {
+.icon__facebook {
     width: 12px;
     height: 19px;
-    background: url('../assets/css_sprites.png') -164px -10px;
 }
 
-.icon-facebook-o {
-    width: 12px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -164px -49px;
+.icon__facebook--color-dark {
+    background-position: -164px -84px;
 }
 
-.icon-facebook-w {
-    width: 12px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -164px -88px;
+.icon__facebook--color-light {
+    background-position: -200px -10px;
 }
 
-div[class^="icon-facebook"].hover-orange:hover {
-    background-position: -164px -49px;
+.icon__facebook--color-accent {
+    background-position: -164px -123px;
 }
 
-div[class^="icon-facebook"].hover-white:hover {
-    background-position: -164px -88px;
+.icon__facebook--hover-dark:hover {
+    background-position: -164px -84px;
 }
 
-div[class^="icon-facebook"].hover-black:hover {
-    background-position: -164px -10px;
+.icon__facebook--hover-light:hover {
+    background-position: -200px -10px;
+}
+
+.icon__facebook--hover-accent:hover {
+    background-position: -164px -123px;
 }
 
 
@@ -72,34 +77,33 @@ div[class^="icon-facebook"].hover-black:hover {
     Pinterest
 *******************/
 
-.icon-pinterest-b {
+.icon__pinterest {
     width: 15px;
     height: 19px;
-    background: url('../assets/css_sprites.png') -129px -10px;
 }
 
-.icon-pinterest-o {
-    width: 15px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -129px -49px;
+.icon__pinterest--color-dark {
+    background-position: -129px -10px;
 }
 
-.icon-pinterest-w {
-    width: 15px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -129px -88px;
-}
-
-div[class^="icon-pinterest"].hover-orange:hover {
-    background-position: -129px -49px;
-}
-
-div[class^="icon-pinterest"].hover-white:hover {
+.icon__pinterest--color-light {
     background-position: -129px -88px;
 }
 
-div[class^="icon-pinterest"].hover-black:hover {
+.icon__pinterest--color-accent {
+    background-position: -129px -49px;
+}
+
+.icon__pinterest--hover-dark:hover {
     background-position: -129px -10px;
+}
+
+.icon__pinterest--hover-light:hover {
+    background-position: -129px -88px;
+}
+
+.icon__pinterest--hover-accent:hover {
+    background-position: -129px -49px;
 }
 
 
@@ -107,34 +111,33 @@ div[class^="icon-pinterest"].hover-black:hover {
     Search 
 *******************/
 
-.icon-search-b {
+.icon__search {
     width: 19px;
     height: 19px;
-    background: url('../assets/css_sprites.png') -50px -49px;
 }
 
-.icon-search-o {
-    width: 19px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -90px -10px;
+.icon__search--color-dark {
+    background-position: -50px -49px;
 }
 
-.icon-search-w {
-    width: 19px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -90px -49px;
-}
-
-div[class^="icon-search"].hover-orange:hover {
-    background-position: -90px -10px;
-}
-
-div[class^="icon-search"].hover-white:hover {
+.icon__search--color-light {
     background-position: -90px -49px;
 }
 
-div[class^="icon-search"].hover-black:hover {
+.icon__search--color-accent {
+    background-position: -90px -10px;
+}
+
+.icon__search--hover-dark:hover {
     background-position: -50px -49px;
+}
+
+.icon__search--hover-light:hover {
+    background-position: -90px -49px;
+}
+
+.icon__search--hover-accent:hover {
+    background-position: -90px -10px;
 }
 
 
@@ -142,34 +145,33 @@ div[class^="icon-search"].hover-black:hover {
     Twitter
 *******************/
 
-.icon-twitter-b {
+.icon__twitter {
     width: 19px;
     height: 19px;
-    background: url('../assets/css_sprites.png') -10px -88px;
 }
 
-.icon-twitter-o {
-    width: 19px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -49px -88px;
+.icon__twitter--color-dark {
+    background-position: -10px -88px;
 }
 
-.icon-twitter-w {
-    width: 19px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -88px -88px;
-}
-
-div[class^="icon-twitter"].hover-orange:hover {
-    background-position: -49px -88px;
-}
-
-div[class^="icon-twitter"].hover-white:hover {
+.icon__twitter--color-light {
     background-position: -88px -88px;
 }
 
-div[class^="icon-twitter"].hover-black:hover {
+.icon__twitter--color-accent {
+    background-position: -49px -88px;
+}
+
+.icon__twitter--hover-dark:hover {
     background-position: -10px -88px;
+}
+
+.icon__twitter--hover-light:hover {
+    background-position: -88px -88px;
+}
+
+.icon__twitter--hover-accent:hover {
+    background-position: -49px -88px;
 }
 
 
@@ -177,32 +179,65 @@ div[class^="icon-twitter"].hover-black:hover {
    Youtube 
 *******************/
 
-.icon-youtube-b {
+.icon__youtube {
     width: 20px;
     height: 19px;
-    background: url('../assets/css_sprites.png') -10px -10px;
 }
 
-.icon-youtube-o {
-    width: 20px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -50px -10px;
-}
-
-.icon-youtube-w {
-    width: 20px;
-    height: 19px;
-    background: url('../assets/css_sprites.png') -10px -49px;
-}
-
-div[class^="icon-youtube"].hover-orange:hover {
-    background-position: -50px -10px;
-}
-
-div[class^="icon-youtube"].hover-white:hover {
-    background-position: -50px -10px;
-}
-
-div[class^="icon-youtube"].hover-black:hover {
+.icon__youtube--color-dark {
     background-position: -10px -10px;
+}
+
+.icon__youtube--color-light {
+    background-position: -10px -49px;
+}
+
+.icon__youtube--color-accent {
+    background-position: -50px -10px;
+}
+
+.icon__youtube--hover-dark:hover {
+    background-position: -10px -10px;
+}
+
+.icon__youtube--hover-light:hover {
+    background-position: -10px -49px;
+}
+
+.icon__youtube--hover-accent:hover {
+    background-position: -50px -10px;
+}
+
+
+/*******************
+   Bars 
+*******************/
+
+.icon__bars {
+    width: 16px;
+    height: 17px;
+}
+
+.icon__bars--color-dark {
+    background-position: -46px -127px;
+}
+
+.icon__bars--color-light {
+    background-position: -128px -127px;
+}
+
+.icon__bars--color-accent {
+    background-position: -87px -127px;
+}
+
+.icon__bars--hover-dark:hover {
+    background-position: -46px -127px;
+}
+
+.icon__bars--hover-light:hover {
+    background-position: -128px -127px;
+}
+
+.icon__bars--hover-accent:hover {
+    background-position: -87px -127px;
 }

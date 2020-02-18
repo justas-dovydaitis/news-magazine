@@ -123,6 +123,7 @@ submitButton.onclick = function(event) {
     console.log(body);
     if (confirm('You really save it?')) {
         saveRequest.send(body);
+        window.location.reload();
     }
 };
 
@@ -134,6 +135,7 @@ if (parsedQuery && parsedQuery.id) {
     deleteButton.onclick = function() {
         if (confirm('You really wanna delete it?')) {
             deletePostRequest.send();
+            window.location.href = '/';
         }
     };
 
