@@ -1,4 +1,4 @@
-/* global window document XMLHttpRequest select Event alert confirm selectedItemsValues FormData */
+/* global window document XMLHttpRequest select alert confirm selectedItemsValues FormData selectOptions resizeArea */
 const formFields = {
     title: document.querySelector('#title'),
     content: document.querySelector('#content'),
