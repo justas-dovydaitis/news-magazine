@@ -9,32 +9,27 @@
     Chevron up 
 *******************/
 
-.icon.icon__chevron-up {
-    width: 16px;
-    height: 17px;
-}
-
-.icon__chevron-up--color-dark {
+.icon-chevron-up-dark {
     background-position: -164px -10px;
 }
 
-.icon__chevron-up--color-light {
+.icon-chevron-up-light {
     background-position: -10px -127px;
 }
 
-.icon__chevron-up--color-accent {
+.icon-chevron-up-accent {
     background-position: -164px -47px;
 }
 
-.icon__chevron-up--hover-dark:hover {
+.icon-chevron-up-hover-dark:hover {
     background-position: -164px -10px;
 }
 
-.icon__chevron-up--hover-light:hover {
+.icon-chevron-up-hover-light:hover {
     background-position: -10px -127px;
 }
 
-.icon__chevron-up--hover-accent:hover {
+.icon-chevron-up-hover-accent:hover {
     background-position: -164px -47px;
 }
 
@@ -43,32 +38,27 @@
     facebook 
 *******************/
 
-.icon__facebook {
-    width: 12px;
-    height: 19px;
-}
-
-.icon__facebook--color-dark {
+.icon-facebook-dark {
     background-position: -164px -84px;
 }
 
-.icon__facebook--color-light {
+.icon-facebook-light {
     background-position: -200px -10px;
 }
 
-.icon__facebook--color-accent {
+.icon-facebook-accent {
     background-position: -164px -123px;
 }
 
-.icon__facebook--hover-dark:hover {
+.icon-facebook-hover-dark:hover {
     background-position: -164px -84px;
 }
 
-.icon__facebook--hover-light:hover {
+.icon-facebook-hover-light:hover {
     background-position: -200px -10px;
 }
 
-.icon__facebook--hover-accent:hover {
+.icon-facebook-hover-accent:hover {
     background-position: -164px -123px;
 }
 
@@ -77,32 +67,27 @@
     Pinterest
 *******************/
 
-.icon__pinterest {
-    width: 15px;
-    height: 19px;
-}
-
-.icon__pinterest--color-dark {
+.icon-pinterest-dark {
     background-position: -129px -10px;
 }
 
-.icon__pinterest--color-light {
+.icon-pinterest-light {
     background-position: -129px -88px;
 }
 
-.icon__pinterest--color-accent {
+.icon-pinterest-accent {
     background-position: -129px -49px;
 }
 
-.icon__pinterest--hover-dark:hover {
+.icon-pinterest-hover-dark:hover {
     background-position: -129px -10px;
 }
 
-.icon__pinterest--hover-light:hover {
+.icon-pinterest-hover-light:hover {
     background-position: -129px -88px;
 }
 
-.icon__pinterest--hover-accent:hover {
+.icon-pinterest-hover-accent:hover {
     background-position: -129px -49px;
 }
 
@@ -111,32 +96,27 @@
     Search 
 *******************/
 
-.icon__search {
-    width: 19px;
-    height: 19px;
-}
-
-.icon__search--color-dark {
+.icon-search-dark {
     background-position: -50px -49px;
 }
 
-.icon__search--color-light {
+.icon-search-light {
     background-position: -90px -49px;
 }
 
-.icon__search--color-accent {
+.icon-search-accent {
     background-position: -90px -10px;
 }
 
-.icon__search--hover-dark:hover {
+.icon-search-hover-dark:hover {
     background-position: -50px -49px;
 }
 
-.icon__search--hover-light:hover {
+.icon-search-hover-light:hover {
     background-position: -90px -49px;
 }
 
-.icon__search--hover-accent:hover {
+.icon-search-hover-accent:hover {
     background-position: -90px -10px;
 }
 
@@ -145,32 +125,27 @@
     Twitter
 *******************/
 
-.icon__twitter {
-    width: 19px;
-    height: 19px;
-}
-
-.icon__twitter--color-dark {
+.icon-twitter-dark {
     background-position: -10px -88px;
 }
 
-.icon__twitter--color-light {
+.icon-twitter-light {
     background-position: -88px -88px;
 }
 
-.icon__twitter--color-accent {
+.icon-twitter-accent {
     background-position: -49px -88px;
 }
 
-.icon__twitter--hover-dark:hover {
+.icon-twitter-hover-dark:hover {
     background-position: -10px -88px;
 }
 
-.icon__twitter--hover-light:hover {
+.icon-twitter-hover-light:hover {
     background-position: -88px -88px;
 }
 
-.icon__twitter--hover-accent:hover {
+.icon-twitter-hover-accent:hover {
     background-position: -49px -88px;
 }
 
@@ -179,32 +154,27 @@
    Youtube 
 *******************/
 
-.icon__youtube {
-    width: 20px;
-    height: 19px;
-}
-
-.icon__youtube--color-dark {
+.icon-youtube-dark {
     background-position: -10px -10px;
 }
 
-.icon__youtube--color-light {
+.icon-youtube-light {
     background-position: -10px -49px;
 }
 
-.icon__youtube--color-accent {
+.icon-youtube-accent {
     background-position: -50px -10px;
 }
 
-.icon__youtube--hover-dark:hover {
+.icon-youtube-hover-dark:hover {
     background-position: -10px -10px;
 }
 
-.icon__youtube--hover-light:hover {
+.icon-youtube-hover-light:hover {
     background-position: -10px -49px;
 }
 
-.icon__youtube--hover-accent:hover {
+.icon-youtube-hover-accent:hover {
     background-position: -50px -10px;
 }
 
@@ -213,31 +183,26 @@
    Bars 
 *******************/
 
-.icon__bars {
-    width: 16px;
-    height: 17px;
-}
-
-.icon__bars--color-dark {
+.icon-bars-dark {
     background-position: -46px -127px;
 }
 
-.icon__bars--color-light {
+.icon-bars-light {
     background-position: -128px -127px;
 }
 
-.icon__bars--color-accent {
+.icon-bars-accent {
     background-position: -87px -127px;
 }
 
-.icon__bars--hover-dark:hover {
+.icon-bars-hover-dark:hover {
     background-position: -46px -127px;
 }
 
-.icon__bars--hover-light:hover {
+.icon-bars-hover-light:hover {
     background-position: -128px -127px;
 }
 
-.icon__bars--hover-accent:hover {
+.icon-bars-hover-accent:hover {
     background-position: -87px -127px;
 }

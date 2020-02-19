@@ -1,13 +1,12 @@
 /* global document */
 const lineHeight = 15;
 let area = document.querySelector('textarea[name="content"]');
-area.oninput = resizeArea;
 
 function resizeArea(event) {
     const minRows = 4;
     const maxRows = 12;
 
-    let obj = this;
+    let obj = event.target;
     let key = event.keyCode || event.charCode;
     let currentScrollHeight = parseInt(obj.scrollHeight, 10);
     let lines = Math.floor(currentScrollHeight / lineHeight);
@@ -31,4 +30,5 @@ function loadArea(area) {
     area.style.height = area.scrollHeight + 5 + 'px';
     area.style.lineHeight = lineHeight + 'px';
 }
+area.oninput = resizeArea;
 document.onload = loadArea(area);

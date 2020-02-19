@@ -38,8 +38,7 @@ function loadPostData() {
         formFields.title.value = response.title;
 
         formFields.content.value = response.content;
-        const areaChange = new Event('input');
-        formFields.content.dispatchEvent(areaChange);
+        resizeArea({ key: 'Enter', target: formFields.content });
 
         formFields.imageTitle.value = response.imageAlt;
         formFields.imageAlt.value = response.imageAlt;
@@ -60,8 +59,7 @@ function loadPostData() {
             }
         }
 
-        const selectChange = new Event('change');
-        formFields.tags.dispatchEvent(selectChange);
+        selectOptions({ target: formFields.tags.options });
     } else if (loadPostRequest.status === 404) {
         alert('Post not found. You will be redirected to homepage');
         window.location.href = '/';
@@ -99,7 +97,7 @@ function createRequestBody() {
     reqBody.append('imageTitle', formFields.imageTitle.value);
     reqBody.append('content', formFields.content.value);
     reqBody.append('title', formFields.title.value);
-    reqBody.append('categories', selectedItemsValues.map(option => { return option.value; }));
+    reqBody.append('categories', selectedItemsValues.map(function(option) { return option.value; }));
     reqBody.append('featured', formFields.featured.checked);
     return reqBody;
 }
